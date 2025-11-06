@@ -1,4 +1,4 @@
-
+#from scripts.common_functions import run_sport_data_query
 from scripts.common_functions import get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes,get_top_metrics_by_source,get_unique_metrics_count,get_date_range_and_counts_for_top_metrics
 import platform as platform
 '''
@@ -54,5 +54,7 @@ top_vald_metrics = get_top_metrics_by_source('Vald',10)
 ## Identifies how many unique metrics exist across all data sources
 unique_metrics_count = get_unique_metrics_count()
 
-## For each data source, show the date range and record count for the top metrics -- need to fix function
-date_range_and_counts = get_date_range_and_counts_for_top_metrics()
+## For each data source, show the date range and record count for the top metrics
+date_range_and_counts = get_date_range_and_counts_for_top_metrics('Hawkins',10)
+date_range_and_counts = get_date_range_and_counts_for_top_metrics('Kinexon',10)
+date_range_and_counts = get_date_range_and_counts_for_top_metrics('Vald',10)

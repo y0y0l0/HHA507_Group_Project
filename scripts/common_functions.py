@@ -69,7 +69,7 @@ def get_unique_athletes() -> int:
     sql_test_query = "select playername from research_experiment_refactor_test  group by playername;"
     response = run_sport_data_query(sql_test_query)
     if not response.empty:
-        response.to_csv('output/playerNames.csv')
+        response.to_csv('output/1.2-1_playerNames.csv')
         print(f"There are Unique athletes {response.shape[0]} in the database.")
     return 0
 
@@ -83,7 +83,7 @@ def get_unique_sports() -> int:
     sql_query = "SELECT team FROM research_experiment_refactor_test group by team;"
     response = run_sport_data_query(sql_query)
     if not response.empty:
-        response.to_csv('output/sportTeams.csv')
+        response.to_csv('output/1.2-2_sportTeams.csv')
         print(f"There are Unique sports/teams {response.shape[0]} in the database.")
     return 0
 def get_unique_date_ranges() -> int:
@@ -103,7 +103,7 @@ def get_unique_date_ranges() -> int:
         #response = run_sport_data_query(sql_query)
         #response
         #if not response.empty:
-        response.to_csv('output/sessionandCreationDateRanges.csv') 
+        response.to_csv('output/1.2-3_sessionandCreationDateRanges.csv') 
         print(f"The creation date range of available data: {response.iloc[0]['min_creation_date']} to {response.iloc[0]['max_creation_date']}")
         print(f"The session date range of available data: {response.iloc[0]['min_session_date']} to {response.iloc[0]['max_session_date']}")
     return 0
@@ -119,7 +119,7 @@ def get_num_device_records() -> int:
     if not response.empty:
         for index, row in response.iterrows():
             print(f"The data source {response.iloc[index]['data_source']} has {response.iloc[index]['record_count']} records.")
-        response.to_csv('output/deviceRecordCounts.csv')
+        response.to_csv('output/1.2-4_deviceRecordCounts.csv')
         #print(f"The data source {response.iloc[0]['data_source']} has {response.iloc[0]['record_count']} records.")
         return response.iloc[0]['record_count']
     return 0
@@ -135,9 +135,10 @@ def get_invalid_athletes() -> int:
     response = run_sport_data_query(sql_query)
     if not response.empty:
         print(f"There are {response.shape[0]} invalid athletes in the database.")
-        response.to_csv('output/invalidAthletes.csv')
+        response.to_csv('output/1.2-5_invalidAthletes.csv')
     else:
-        print("There are no invalid athletes in the database.")    
+        print("There are no invalid athletes in the database.")
+        response.to_csv('output/1.2-5_NoDataFound_invalidAthletes.csv')    
     return response.shape[0]
 def get_multi_source_athletes() -> int:
     """Get the count of athletes with data from multiple sources (2 or 3 systems).
@@ -155,9 +156,10 @@ def get_multi_source_athletes() -> int:
     response = run_sport_data_query(sql_query)
     if not response.empty:
         print(f"There are {response.shape[0]} athletes with data from multiple sources.")
-        response.to_csv('output/multiSourceAthletes.csv')
+        response.to_csv('output/1.2-6_multiSourceAthletes.csv')
     else:
         print("There are no athletes with data from multiple sources.")
+        response
     return response.shape[0]
 
 def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
@@ -181,7 +183,7 @@ def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
     response = run_sport_data_query(sql_query)
     if not response.empty:
         print(f"Top {top_n} metrics for {data_source}:")
-        response.to_csv(f'output/top_{top_n}_metrics_{data_source}.csv')
+        response.to_csv(f'output/1.3-1_top_{top_n}_metrics_{data_source}.csv')
     return 0
 def get_unique_metrics_count() -> int:
     """Get the count of unique metrics across all data sources.
@@ -194,32 +196,28 @@ def get_unique_metrics_count() -> int:
     response = run_sport_data_query(sql_query)
     if not response.empty:
         print(f"There are {response.shape[0]} unique metrics across all data sources.")
-        response.to_csv('output/uniqueMetrics.csv')
+        response.to_csv('output/1.3-2_uniqueMetrics.csv')
     return response.shape[0]
-def get_date_range_and_counts_for_top_metrics() -> pd.DataFrame:
+def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> pd.DataFrame:
     """Get the date range and record count for the top metrics by data source.
 
     Returns:
         pd.DataFrame: A DataFrame containing the date range and counts for top metrics.
         csv: A CSV file containing the date range and counts for top metrics.
     """
-    sql_query = """
-    SELECT data_source, metric,
-           MIN(timestamp) AS min_timestamp,
-           MAX(timestamp) AS max_timestamp,
-           COUNT(*) AS record_count
+    sql_query =f"""
+    SELECT metric, COUNT(*) AS record_count,
+            MIN(timestamp) AS min_timestamp,
+            MAX(timestamp) AS max_timestamp
     FROM research_experiment_refactor_test
-    WHERE metric IN (
-        SELECT metric
-        FROM research_experiment_refactor_test
-        GROUP BY metric
-        ORDER BY COUNT(*) DESC
-        LIMIT 10
-    )
-    GROUP BY data_source, metric;
+    WHERE UPPER(data_source) = UPPER('{data_source}')
+    GROUP BY metric
+    ORDER BY COUNT(*) DESC
+    LIMIT {top_n};
     """
-    response = run_sport_data_query(sql_query)
+    print(f"Executing query for {data_source}: {sql_query}")
+    response = run_sport_data_query(sql_query);
     if not response.empty:
-        print("Date range and counts for top metrics by data source:")
-        response.to_csv('output/date_range_and_counts_top_metrics.csv')
+        print(f"Date min_timestamp {response['min_timestamp'].min()} and max_timestamp {response['max_timestamp'].max()} for top metrics by data source {data_source}.")
+        response.to_csv(f'output/1.3-3_date_range_and_counts_top_metrics_{data_source}.csv', index=False)
     return response 
