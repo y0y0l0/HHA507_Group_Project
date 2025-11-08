@@ -2,7 +2,6 @@ import pandas as pd
 import os
 import traceback
 from dotenv import load_dotenv
-from polars import sql
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 
