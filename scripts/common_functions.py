@@ -229,7 +229,7 @@ def get_sports_team_and_counts_for_top_metrics(data_source: str, top_n: int) -> 
     """
     sql_query =f"""
     SELECT metric, COUNT(*) AS record_count,
-            MAX(team) AS team,
+            MAX(team) AS team
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
     GROUP BY metric
