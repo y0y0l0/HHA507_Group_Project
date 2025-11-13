@@ -70,8 +70,8 @@ def get_unique_athletes() -> int:
     response = run_sport_data_query(sql_test_query)
     if not response.empty:
         response.to_csv('output/1.2-1_playerNames.csv')
-        print(f"There are {response.shape[0]} unique athletesin the database.")
-    return 0
+        print(f"There are {response['playername'].nunique()} unique athletes in the database.")
+    return response['playername'].nunique()
 
 def get_unique_sports() -> int:
     """Get the number of unique sports/teams in the database.

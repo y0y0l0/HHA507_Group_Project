@@ -1,4 +1,4 @@
-from common_functions import Engine, create_engine, pd, run_sport_data_query
+from common_functions import run_sport_data_query,get_unique_athletes
 
 
 def get_all_clean_metrics_records() -> int:
@@ -39,7 +39,7 @@ def get_metric_with_most_missing_records() -> int:
     response = run_sport_data_query(sql_test_query)
     if not response.empty:
         response.to_csv('output/2.1-1_metric_with_most_missing_records.csv')
-    return response.head()
+    return response
 
 def get_athletes_with_at_least_5_measurements_in_selected_metrics() -> int:
     """Get the percentage of athletes with at least 5 measurements.
@@ -60,7 +60,8 @@ def get_athletes_with_at_least_5_measurements_in_selected_metrics() -> int:
 
     if not response.empty:
         response.to_csv('output/2.1-2_athletes_with_at_least_5_measurements_in_selected_metrics.csv')
-    return response.head()
+        print(f"The percentage of athletes with at least 5 measurements in selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}%.")
+    return response['playername'].unique()
 
 
 def get_athletes_with_5_measurements_not_in_selected_metrics() -> int:

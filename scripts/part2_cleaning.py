@@ -23,6 +23,7 @@ import platform as platform
 |created_at              |TIMESTAMP    |Record creation timestamp                                                   |
 '''
 ## Identify which of your selected metrics have the most NULL or zero records.
+
 get_all_clean_metrics_records()
 get_metric_with_most_missing_records()
 
@@ -30,7 +31,9 @@ get_metric_with_most_missing_records()
 get_athletes_with_at_least_5_measurements_in_selected_metrics()
 # 459 out of 1287 players have at least 5 measurements 
 # Percentage = (459/1287)*100 = 35.67%
+
 get_athletes_with_5_measurements_not_in_selected_metrics()
+
 ## Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
 #get_athletes_not_tested_in_last_6_months()
 ## Determine if you have sufficient data to answer your research question
