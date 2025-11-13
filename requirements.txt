@@ -2,3 +2,8 @@ pandas
 dotenv
 pymysql
 sqlalchemy
+traceback
+matplotlib
+seaborn
+numpy
+scipy
