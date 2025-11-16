@@ -60,7 +60,6 @@ def run_sport_data_query(sql: str, engine: Engine = None) -> pd.DataFrame:
         return pd.DataFrame()  # Return empty DataFrame on error
 def get_unique_athletes() -> int:
     """Get the number of unique athletes in the database.
-
     Returns:
         int: The count of unique athletes.
         csv: A CSV file containing the player names.
@@ -164,9 +163,8 @@ def get_multi_source_athletes() -> int:
 
 def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
     """Get the top N most common metrics for a given data source.
-
     Args:
-        data_source (str): The data source to filter by (e.g., 'Hawkins').
+        data_source (str): The data source to filter by (e.g., 'Hawkins','Kinexon','Vald').
         top_n (int): The number of top metrics to return.
 
     Returns:
@@ -176,7 +174,7 @@ def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
     SELECT  metric, COUNT(*) AS metric_count
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
-    AND value is not null and value> 0.0
+    AND value IS NOT NULL AND value > 0.0
     AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
     GROUP BY metric
     ORDER BY metric_count DESC
@@ -202,7 +200,9 @@ def get_unique_metrics_count() -> int:
     return response.shape[0]
 def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> pd.DataFrame:
     """Get the date range and record count for the top metrics by data source.
-
+    Args:
+        data_source (str): The data source to filter by (e.g., 'Hawkins','Kinexon','Vald').
+        top_n (int): The number of top metrics to return.
     Returns:
         pd.DataFrame: A DataFrame containing the date range and counts for top metrics.
         csv: A CSV file containing the date range and counts for top metrics.
@@ -213,7 +213,7 @@ def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> p
             MAX(timestamp) AS max_timestamp
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
-    AND value is not null and value> 0.0
+    AND value IS NOT NULL AND value > 0.0
     AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
     GROUP BY  metric
     ORDER BY COUNT(*) DESC
@@ -227,7 +227,9 @@ def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> p
     return response 
 def get_sports_team_and_counts_for_top_metrics(data_source: str, top_n: int) -> pd.DataFrame:
     """Get the date range and record count for the top metrics by data source.
-
+    Args:
+        data_source (str): The data source to filter by (e.g., 'Hawkins','Kinexon','Vald').
+        top_n (int): The number of top metrics to return.
     Returns:
         pd.DataFrame: A DataFrame containing the date range and counts for top metrics.
         csv: A CSV file containing the date range and counts for top metrics.

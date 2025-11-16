@@ -140,6 +140,10 @@ def get_athletes_not_tested_in_last_6_months() -> int:
     return response['playername'].unique()
 def get_data_in_wide_format_by_athlete_and_metric(input_metric_list: list, input_playername_list: list, format_type: str) -> pd.DataFrame:
     """Get the data in wide format by athlete and metric based on the provides list of metrics and athletes.
+    Args:
+        input_metric_list (list): List of metrics to filter the data.
+        input_playername_list (list): List of player names to filter the data.
+        format_type (str): "wide" for wide format, "long" for long format.
     Returns:
         pd.DataFrame: A DataFrame with athletes as rows and metrics as columns.
     """

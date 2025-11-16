@@ -46,12 +46,12 @@ To address this, we propose the following steps:        '''
 '''3. Additional Data Collection: If feasible, we could look into collecting additional data for athletes with insufficient measurements to enhance the dataset's completeness.        '''
 '''4. Sensitivity Analysis: Conduct sensitivity analyses to understand how the presence of missing data might affect our results and interpretations.        '''
 
-'''2.2 -Data Transformation Challenge  helper function that returns clean data for selected metrics list and playername list'''
+'''2.2 - Data Transformation Challenge  helper function that returns clean data for selected metrics list and playername list'''
 ## Define the list of metrics and player names
 metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
 playername_list = ['PLAYER_755', 'PLAYER_690', 'PLAYER_1128']
 ## Call the function to get data in The data is in "long format" (one row per metric per timestamp) to to "wide format"
 get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"wide")
-
-
-
+''' 2.3 - Create a Derived Metric'''
+## Calculates the mean value for each team (using the team column)
+get_mean_value_for_each_team()
