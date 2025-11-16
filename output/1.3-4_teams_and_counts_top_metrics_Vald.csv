@@ -1,11 +1,11 @@
-metric,record_count,team
-leftAvgForce,3722,Womens Soccer
-leftMaxForce,3722,Womens Soccer
-leftImpulse,3719,Womens Soccer
-rightAvgForce,3719,Womens Soccer
-rightMaxForce,3719,Womens Soccer
-rightImpulse,3714,Womens Soccer
-leftTorque,3679,Womens Soccer
-rightTorque,3676,Womens Soccer
-rightRepetitions,3662,Womens Soccer
-leftRepetitions,3654,Womens Soccer
+metric,record_count,unique_team_count,team
+leftAvgForce,3517,14,Womens Soccer
+leftMaxForce,3517,14,Womens Soccer
+leftImpulse,3514,14,Womens Soccer
+rightAvgForce,3514,14,Womens Soccer
+rightMaxForce,3514,14,Womens Soccer
+rightImpulse,3509,14,Womens Soccer
+leftTorque,3475,14,Womens Soccer
+rightTorque,3472,14,Womens Soccer
+rightRepetitions,3460,14,Womens Soccer
+leftRepetitions,3452,14,Womens Soccer

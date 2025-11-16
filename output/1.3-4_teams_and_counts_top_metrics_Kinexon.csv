@@ -1,11 +1,11 @@
-metric,record_count,team
-track_outside_field,40803,Womens Soccer
-track_heart_rate_always,40803,Womens Soccer
-accel_load_accum,40703,Womens Soccer
-time_total,40585,Womens Soccer
-accel_load_accum_avg_per_minute,40485,Womens Soccer
-distance_total,40317,Womens Soccer
-speed_distance_per_time,40316,Womens Soccer
-distance_total_avg_per_minute,40315,Womens Soccer
-speed_max,40312,Womens Soccer
-speed_avg,40298,Womens Soccer
+metric,record_count,unique_team_count,team
+track_outside_field,40803,5,Womens Soccer
+track_heart_rate_always,40803,5,Womens Soccer
+accel_load_accum,40703,5,Womens Soccer
+time_total,40585,5,Womens Soccer
+accel_load_accum_avg_per_minute,40485,5,Womens Soccer
+distance_total,40317,5,Womens Soccer
+speed_distance_per_time,40316,5,Womens Soccer
+distance_total_avg_per_minute,40315,5,Womens Soccer
+speed_max,40312,5,Womens Soccer
+speed_avg,40298,5,Womens Soccer

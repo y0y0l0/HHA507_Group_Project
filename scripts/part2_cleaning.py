@@ -51,7 +51,6 @@ To address this, we propose the following steps:        '''
 metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
 playername_list = ['PLAYER_755', 'PLAYER_690', 'PLAYER_1128']
 ## Call the function to get data in The data is in "long format" (one row per metric per timestamp) to to "wide format"
-get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"long")
 get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"wide")
 
 
