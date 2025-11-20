@@ -1,4 +1,4 @@
-from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics
+from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
 import platform as platform
 
 '''2.1 Data Understanding Recap (Group)
@@ -54,6 +54,11 @@ metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'ac
 playername_list = ['PLAYER_755', 'PLAYER_690', 'PLAYER_1128']
 ## Call the function to get data in The data is in "long format" (one row per metric per timestamp) to to "wide format"
 get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"wide")
+get_data_in_wide_format_by_athlete_and_metric(metric_list, "all","wide")
 ''' 2.3 - Create a Derived Metric'''
 ## Calculates the mean value for each team (using the team column)
-#get_mean_value_for_each_team()
+get_mean_value_for_each_team()
+
+''' 3.2 - Export Cleaned Data'''
+## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')
+get_all_clean_metrics_records()
