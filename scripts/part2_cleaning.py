@@ -9,7 +9,7 @@ import platform as platform
 |timestamp               |DATETIME     |Date and time of the measurement/session                                    |
 |device                  |VARCHAR(50)  |Specific device/equipment used for measurement                              |
 |metric                  |VARCHAR(255) |Name of the performance metric being measured                               |
-|value                   |DECIMAL(20,6)|Numeric value of the metric                                           |
+|value                   |DECIMAL(20,6)|Numeric value of the metric                                                 |
 |team                    |VARCHAR(255) |Sport/team affiliation (e.g., Football, Soccer, Basketball)                 |
 |session_type            |VARCHAR(255) |Type of session (e.g., Practice, Game, Training) - only relevant for Kinexon|
 |session_description     |TEXT         |Detailed description of the session                                         |

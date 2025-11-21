@@ -270,9 +270,9 @@ def get_all_clean_metrics_records() -> int:
         csv: A CSV file containing all records.
     """
     ## How many unique athlete are in the database?
-    sql_test_query = "SELECT  metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
+    sql_test_query = "SELECT  timestamp,created_at,function_description,metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
-                        "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')" \
+                        "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')" \
                         "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
     response = run_sport_data_query(sql_test_query)
 
