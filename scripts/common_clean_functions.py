@@ -279,7 +279,7 @@ def get_all_clean_metrics_records(report_type:str) -> int:
     if not response.empty:
         output_file = 'output/3.2-1_all_clean_metrics_records.csv'
         if report_type.upper() == "WIDE":
-            response = response.pivot_table(index=['playername', 'timestamp'], columns='metric', values='value').reset_index()
+            response = response.pivot_table(index=['playername', 'timestamp', 'team'], columns='metric', values='value').reset_index()
             output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'
         try:
             response.to_csv(output_file)
