@@ -263,14 +263,14 @@ def get_all_clean_metrics_records() -> int:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
-def get_all_clean_metrics_records() -> int:
+def get_all_clean_metrics_records(report_type:str) -> int:
     """Get all records from the database with clean metrics.
     Returns:
         int: The number of records retrieved.
         csv: A CSV file containing all records.
     """
     ## How many unique athlete are in the database?
-    sql_test_query = "SELECT  timestamp,created_at,function_description,metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
+    sql_test_query = "SELECT  timestamp,created_at,metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
                         "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')" \
                         "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
@@ -278,6 +278,9 @@ def get_all_clean_metrics_records() -> int:
 
     if not response.empty:
         output_file = 'output/3.2-1_all_clean_metrics_records.csv'
+        if report_type.upper() == "WIDE":
+            response = response.pivot_table(index=['playername', 'timestamp'], columns='metric', values='value').reset_index()
+            output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")

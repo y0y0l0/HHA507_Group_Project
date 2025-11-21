@@ -24,7 +24,6 @@ import platform as platform
 
 #2.1 Missing Data Analysis (Group)
 ##2.1-1 Identify which of your selected metrics have the most NULL or zero records.
-get_all_clean_metrics_records()
 get_metric_with_most_missing_records()
 
 ##2.1-2 For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')
@@ -60,5 +59,5 @@ get_data_in_wide_format_by_athlete_and_metric(metric_list, "all","wide")
 get_mean_value_for_each_team()
 
 ''' 3.2 - Export Cleaned Data'''
-## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')
-get_all_clean_metrics_records()
+## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')
+get_all_clean_metrics_records("wide")
