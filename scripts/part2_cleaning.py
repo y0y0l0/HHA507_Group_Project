@@ -64,5 +64,5 @@ get_mean_value_for_each_team()
 get_all_clean_metrics_records("wide")
 
 ''' 3.1-2 Match Force/Torque Metrics with Accel_Load_Accum and Distance_Total by Date'''
-## Call the function to match metrics by the most recent date
+## Call the function to match metrics by if the date is the same only
 get_matched_metrics_by_date()

@@ -63,7 +63,7 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
         print("No data found for one or both metric groups.")
         return pd.DataFrame()
     
-    # Use pandas merge to find the earliest accel test after strength test
+    # Use pandas merge to find accel tests on the same date as strength test
     print("Merging on playername and team...")
     merged = strength_df.merge(
         accel_df,
@@ -71,17 +71,22 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
         how='inner'
     )
     
-    # Filter: only keep accel tests AFTER strength test timestamp
-    merged = merged[merged['accel_distance_timestamp'] > merged['test_timestamp']]
+    # Filter: only keep accel tests on the same date as strength test
+    merged['strength_date'] = merged['test_timestamp'].dt.date
+    merged['accel_date'] = merged['accel_distance_timestamp'].dt.date
+    merged = merged[merged['accel_date'] == merged['strength_date']]
     
-    # Sort by strength timestamp, then accel timestamp to get earliest accel after
+    # Sort by strength timestamp, then accel timestamp to get earliest accel on same day
     merged = merged.sort_values(['playername', 'team', 'test_timestamp', 'accel_distance_timestamp'])
     
-    # Keep only the first (earliest) accel test after each strength test
+    # Keep only the first (earliest) accel test on the same date for each strength test
     matched = merged.drop_duplicates(
         subset=['test_timestamp', 'playername', 'team'],
         keep='first'
     )
+    
+    # Drop the temporary date columns
+    matched = matched.drop(columns=['strength_date', 'accel_date'])
     
     # Reorder columns
     matched = matched[['test_date', 'test_timestamp', 'playername', 'team', 
