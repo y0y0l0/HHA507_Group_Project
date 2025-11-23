@@ -283,8 +283,9 @@ def get_all_clean_metrics_records(report_type:str) -> int:
             output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'\
             
             # data must be pivoted to calculate avg_torque_asymmetry and avg_max_force_asymmetry after pivot
-            response['avg_torque_asymmetry'] = (response['leftTorque'] - response['rightTorque']).abs() / ((response['leftTorque'] + response['rightTorque']) / 2)
-            response['avg_max_force_asymmetry'] = (response['leftMaxForce'] - response['rightMaxForce']).abs() / ((response['leftMaxForce'] + response['rightMaxForce']) / 2)
+            # using formula from index 10 in the results analysis on our literature review
+            response['avg_torque_asymmetry'] = (response['leftTorque'] - response['rightTorque'])/ ((response['leftTorque'] + response['rightTorque']) )*100
+            response['avg_max_force_asymmetry'] = (response['leftMaxForce'] - response['rightMaxForce']) / ((response['leftMaxForce'] + response['rightMaxForce']) ) *100
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
