@@ -18,10 +18,9 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
 ## Project Structure
     HHA507_Group_Project/                  # Root directory
     ├── 1.1 Team Database Setup Screenshots/  # Directory for team database setup screenshots from each team member
-    |
+    ├── notebooks/                       # Jupyter notebooks
     ├── output/                          # Output data files
     ├── reports/                         # Literature review, Researach Synthesis & Recommendations and presentation slides
-    ├── notebooks/                       # Jupyter notebooks
     ├── scripts/                         # Main scripts
     │   ├── common_clean_function.py     # Common data cleaning and preprocessing functions
     │   ├── common_functions.py          # Common data analysis functions
