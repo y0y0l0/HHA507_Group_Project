@@ -1,0 +1,9 @@
+,timestamp,metric,value,playername,team
+20749,2025-02-24 15:29:41,leftMaxForce,548.25,PLAYER_696,Football
+20750,2025-02-24 15:29:41,leftTorque,254.113875,PLAYER_696,Football
+20751,2025-02-24 15:29:41,rightMaxForce,429.5,PLAYER_696,Football
+20752,2025-02-24 15:29:41,rightTorque,199.07325,PLAYER_696,Football
+20753,2025-01-28 15:27:01,leftMaxForce,446.75,PLAYER_696,Football
+20754,2025-01-28 15:27:01,leftTorque,207.068625,PLAYER_696,Football
+20755,2025-01-28 15:27:01,rightMaxForce,369.5,PLAYER_696,Football
+20756,2025-01-28 15:27:01,rightTorque,171.26325,PLAYER_696,Football

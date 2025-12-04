@@ -1,0 +1,359 @@
+,timestamp,metric,value,playername,team
+7836,2024-07-08 11:44:52,leftMaxForce,571.75,PLAYER_1190,Volleyball
+7837,2024-07-08 11:44:52,leftTorque,223.840125,PLAYER_1190,Volleyball
+7838,2024-07-08 11:44:52,rightMaxForce,560.0,PLAYER_1190,Volleyball
+7839,2024-07-08 11:44:52,rightTorque,219.24,PLAYER_1190,Volleyball
+7840,2024-04-03 17:16:12,leftMaxForce,481.25,PLAYER_1190,Volleyball
+7841,2024-04-03 17:16:12,leftTorque,188.409375,PLAYER_1190,Volleyball
+7842,2024-04-03 17:16:12,rightMaxForce,535.25,PLAYER_1190,Volleyball
+7843,2024-04-03 17:16:12,rightTorque,209.550375,PLAYER_1190,Volleyball
+7844,2024-02-14 18:28:50,leftMaxForce,429.5,PLAYER_1190,Volleyball
+7845,2024-02-14 18:28:50,leftTorque,168.14925,PLAYER_1190,Volleyball
+7846,2024-02-14 18:28:50,rightMaxForce,434.75,PLAYER_1190,Volleyball
+7847,2024-02-14 18:28:50,rightTorque,170.204625,PLAYER_1190,Volleyball
+7848,2024-01-22 18:06:12,leftMaxForce,488.5,PLAYER_1190,Volleyball
+7849,2024-01-22 18:06:12,leftTorque,191.24775,PLAYER_1190,Volleyball
+7850,2024-01-22 18:06:12,rightMaxForce,544.25,PLAYER_1190,Volleyball
+7851,2024-01-22 18:06:12,rightTorque,213.073875,PLAYER_1190,Volleyball
+7852,2023-11-13 19:50:00,accel_load_accum,368.423841,PLAYER_1190,Mens Basketball
+7853,2023-11-13 19:50:00,distance_total,2714.63256,PLAYER_1190,Mens Basketball
+7854,2023-11-12 16:00:00,accel_load_accum,1109.330605,PLAYER_1190,Mens Basketball
+7855,2023-11-12 16:00:00,distance_total,7522.561857,PLAYER_1190,Mens Basketball
+7856,2023-11-11 16:59:20,accel_load_accum,393.762349,PLAYER_1190,Mens Basketball
+7857,2023-11-11 16:59:20,distance_total,2950.688183,PLAYER_1190,Mens Basketball
+7858,2023-11-11 16:00:00,accel_load_accum,1288.91816,PLAYER_1190,Mens Basketball
+7859,2023-11-11 16:00:00,distance_total,8829.546138,PLAYER_1190,Mens Basketball
+7860,2023-11-10 19:00:00,accel_load_accum,541.012675,PLAYER_1190,Mens Basketball
+7861,2023-11-10 19:00:00,distance_total,3552.608268,PLAYER_1190,Mens Basketball
+7862,2023-11-09 18:50:00,accel_load_accum,690.798516,PLAYER_1190,Mens Basketball
+7863,2023-11-09 18:50:00,distance_total,4744.623122,PLAYER_1190,Mens Basketball
+7864,2023-11-08 19:20:00,accel_load_accum,646.747867,PLAYER_1190,Mens Basketball
+7865,2023-11-08 19:20:00,distance_total,4320.10551,PLAYER_1190,Mens Basketball
+7866,2023-11-05 17:00:00,accel_load_accum,809.383752,PLAYER_1190,Mens Basketball
+7867,2023-11-05 17:00:00,distance_total,5527.135368,PLAYER_1190,Mens Basketball
+7868,2023-11-04 14:30:00,accel_load_accum,1426.086352,PLAYER_1190,Mens Basketball
+7869,2023-11-04 14:30:00,distance_total,9622.875897,PLAYER_1190,Mens Basketball
+7870,2023-11-04 14:10:16,accel_load_accum,260.996035,PLAYER_1190,Mens Basketball
+7871,2023-11-04 14:10:16,distance_total,1746.007359,PLAYER_1190,Mens Basketball
+7872,2023-11-03 18:00:00,accel_load_accum,530.101029,PLAYER_1190,Mens Basketball
+7873,2023-11-03 18:00:00,distance_total,3477.386293,PLAYER_1190,Mens Basketball
+7874,2023-11-02 17:20:00,accel_load_accum,721.980357,PLAYER_1190,Mens Basketball
+7875,2023-11-02 17:20:00,distance_total,4716.389237,PLAYER_1190,Mens Basketball
+7876,2023-11-01 18:00:00,accel_load_accum,798.437434,PLAYER_1190,Mens Basketball
+7877,2023-11-01 18:00:00,distance_total,5492.12715,PLAYER_1190,Mens Basketball
+7878,2023-10-31 17:35:00,accel_load_accum,593.407482,PLAYER_1190,Mens Basketball
+7879,2023-10-31 17:35:00,distance_total,4163.656705,PLAYER_1190,Mens Basketball
+7880,2023-10-29 14:30:00,accel_load_accum,1040.242062,PLAYER_1190,Mens Basketball
+7881,2023-10-29 14:30:00,distance_total,6885.28605,PLAYER_1190,Mens Basketball
+7882,2023-10-28 15:24:30,accel_load_accum,526.625479,PLAYER_1190,Mens Basketball
+7883,2023-10-28 15:24:30,distance_total,4022.954971,PLAYER_1190,Mens Basketball
+7884,2023-10-28 15:11:47,accel_load_accum,70.587453,PLAYER_1190,Mens Basketball
+7885,2023-10-28 15:11:47,distance_total,588.362659,PLAYER_1190,Mens Basketball
+7886,2023-10-27 17:50:00,accel_load_accum,475.373106,PLAYER_1190,Mens Basketball
+7887,2023-10-27 17:50:00,distance_total,3082.380133,PLAYER_1190,Mens Basketball
+7888,2023-10-26 17:30:00,accel_load_accum,641.353675,PLAYER_1190,Mens Basketball
+7889,2023-10-26 17:30:00,distance_total,4536.428419,PLAYER_1190,Mens Basketball
+7890,2023-10-25 18:00:00,accel_load_accum,801.174446,PLAYER_1190,Mens Basketball
+7891,2023-10-25 18:00:00,distance_total,5151.319956,PLAYER_1190,Mens Basketball
+7892,2023-10-24 18:20:00,accel_load_accum,513.717511,PLAYER_1190,Mens Basketball
+7893,2023-10-24 18:20:00,distance_total,3678.257367,PLAYER_1190,Mens Basketball
+7894,2023-10-22 16:22:00,accel_load_accum,941.367553,PLAYER_1190,Mens Basketball
+7895,2023-10-22 16:22:00,distance_total,7013.419749,PLAYER_1190,Mens Basketball
+7896,2023-10-21 20:35:20,accel_load_accum,885.928643,PLAYER_1190,Mens Basketball
+7897,2023-10-21 20:35:20,distance_total,6093.515973,PLAYER_1190,Mens Basketball
+7898,2023-10-20 19:09:21,accel_load_accum,54.366751,PLAYER_1190,Mens Basketball
+7899,2023-10-20 19:09:21,distance_total,452.52126,PLAYER_1190,Mens Basketball
+7900,2023-10-20 17:14:32,accel_load_accum,555.141426,PLAYER_1190,Mens Basketball
+7901,2023-10-20 17:14:32,distance_total,3567.150164,PLAYER_1190,Mens Basketball
+7902,2023-10-19 17:20:00,accel_load_accum,716.850373,PLAYER_1190,Mens Basketball
+7903,2023-10-19 17:20:00,distance_total,4789.182968,PLAYER_1190,Mens Basketball
+7904,2023-10-18 18:00:00,accel_load_accum,826.673474,PLAYER_1190,Mens Basketball
+7905,2023-10-18 18:00:00,distance_total,5689.121453,PLAYER_1190,Mens Basketball
+7906,2023-10-17 18:00:00,accel_load_accum,642.670094,PLAYER_1190,Mens Basketball
+7907,2023-10-17 18:00:00,distance_total,4441.513507,PLAYER_1190,Mens Basketball
+7908,2023-10-15 14:30:00,accel_load_accum,1209.236934,PLAYER_1190,Mens Basketball
+7909,2023-10-15 14:30:00,distance_total,8200.236656,PLAYER_1190,Mens Basketball
+7910,2023-10-15 13:20:01,accel_load_accum,458.858891,PLAYER_1190,Mens Basketball
+7911,2023-10-15 13:20:01,distance_total,3218.264805,PLAYER_1190,Mens Basketball
+7912,2023-10-14 12:45:00,accel_load_accum,1103.043348,PLAYER_1190,Mens Basketball
+7913,2023-10-14 12:45:00,distance_total,7545.270131,PLAYER_1190,Mens Basketball
+7914,2023-10-13 18:00:00,accel_load_accum,569.315239,PLAYER_1190,Mens Basketball
+7915,2023-10-13 18:00:00,distance_total,3900.098287,PLAYER_1190,Mens Basketball
+7916,2023-10-12 18:10:00,accel_load_accum,713.649866,PLAYER_1190,Mens Basketball
+7917,2023-10-12 18:10:00,distance_total,4937.514755,PLAYER_1190,Mens Basketball
+7918,2023-10-12 12:49:49,accel_load_accum,266.078351,PLAYER_1190,Mens Basketball
+7919,2023-10-12 12:49:49,distance_total,1752.103914,PLAYER_1190,Mens Basketball
+7920,2023-10-11 18:00:00,accel_load_accum,925.490793,PLAYER_1190,Mens Basketball
+7921,2023-10-11 18:00:00,distance_total,6483.71535,PLAYER_1190,Mens Basketball
+7922,2023-10-10 15:00:00,accel_load_accum,729.956253,PLAYER_1190,Mens Basketball
+7923,2023-10-10 15:00:00,distance_total,5089.067302,PLAYER_1190,Mens Basketball
+7924,2023-10-10 12:47:27,accel_load_accum,346.761021,PLAYER_1190,Mens Basketball
+7925,2023-10-10 12:47:27,distance_total,2294.395254,PLAYER_1190,Mens Basketball
+7926,2023-10-08 15:30:00,accel_load_accum,836.756274,PLAYER_1190,Mens Basketball
+7927,2023-10-08 15:30:00,distance_total,6152.159313,PLAYER_1190,Mens Basketball
+7928,2023-10-07 19:10:00,accel_load_accum,936.782982,PLAYER_1190,Mens Basketball
+7929,2023-10-07 19:10:00,distance_total,6247.789453,PLAYER_1190,Mens Basketball
+7930,2023-10-05 17:55:00,accel_load_accum,390.177108,PLAYER_1190,Mens Basketball
+7931,2023-10-05 17:55:00,distance_total,2881.763356,PLAYER_1190,Mens Basketball
+7932,2023-10-04 20:30:11,accel_load_accum,990.87609,PLAYER_1190,Mens Basketball
+7933,2023-10-04 20:30:11,distance_total,6477.405638,PLAYER_1190,Mens Basketball
+7934,2023-10-03 18:00:00,accel_load_accum,515.411287,PLAYER_1190,Mens Basketball
+7935,2023-10-03 18:00:00,distance_total,3408.6587,PLAYER_1190,Mens Basketball
+7936,2023-10-01 13:45:00,accel_load_accum,1315.187327,PLAYER_1190,Mens Basketball
+7937,2023-10-01 13:45:00,distance_total,8915.670163,PLAYER_1190,Mens Basketball
+7938,2023-09-30 14:45:00,accel_load_accum,1462.805937,PLAYER_1190,Mens Basketball
+7939,2023-09-30 14:45:00,distance_total,9584.384406,PLAYER_1190,Mens Basketball
+7940,2023-09-29 18:00:00,accel_load_accum,473.76667,PLAYER_1190,Mens Basketball
+7941,2023-09-29 18:00:00,distance_total,3181.229305,PLAYER_1190,Mens Basketball
+7942,2023-09-27 18:34:00,accel_load_accum,841.960412,PLAYER_1190,Mens Basketball
+7943,2023-09-27 18:34:00,distance_total,5534.707453,PLAYER_1190,Mens Basketball
+7944,2023-09-26 18:00:00,accel_load_accum,529.10402,PLAYER_1190,Mens Basketball
+7945,2023-09-26 18:00:00,distance_total,3901.97074,PLAYER_1190,Mens Basketball
+7946,2023-09-26 12:22:37,accel_load_accum,3.273583,PLAYER_1190,Mens Basketball
+7947,2023-09-26 12:22:37,distance_total,24.006284,PLAYER_1190,Mens Basketball
+7948,2023-09-25 12:33:58,accel_load_accum,0.181503,PLAYER_1190,Mens Basketball
+7949,2023-09-24 15:30:00,accel_load_accum,1032.245703,PLAYER_1190,Mens Basketball
+7950,2023-09-24 15:30:00,distance_total,6763.647209,PLAYER_1190,Mens Basketball
+7951,2023-09-23 15:30:00,accel_load_accum,959.185314,PLAYER_1190,Mens Basketball
+7952,2023-09-23 15:30:00,distance_total,6549.501852,PLAYER_1190,Mens Basketball
+7953,2023-09-22 22:10:00,accel_load_accum,347.624325,PLAYER_1190,Mens Basketball
+7954,2023-09-22 22:10:00,distance_total,2482.666429,PLAYER_1190,Mens Basketball
+7955,2023-09-21 17:15:15,accel_load_accum,702.108351,PLAYER_1190,Mens Basketball
+7956,2023-09-21 17:15:15,distance_total,4960.805405,PLAYER_1190,Mens Basketball
+7957,2023-09-20 18:15:00,accel_load_accum,851.775195,PLAYER_1190,Mens Basketball
+7958,2023-09-20 18:15:00,distance_total,6012.289856,PLAYER_1190,Mens Basketball
+7959,2023-09-19 18:30:00,accel_load_accum,500.666919,PLAYER_1190,Mens Basketball
+7960,2023-09-19 18:30:00,distance_total,3848.715938,PLAYER_1190,Mens Basketball
+7961,2023-09-17 14:35:00,accel_load_accum,1139.541375,PLAYER_1190,Mens Basketball
+7962,2023-09-17 14:35:00,distance_total,7671.100111,PLAYER_1190,Mens Basketball
+7963,2023-09-16 14:40:00,accel_load_accum,1304.21717,PLAYER_1190,Mens Basketball
+7964,2023-09-16 14:40:00,distance_total,8479.511682,PLAYER_1190,Mens Basketball
+7965,2023-09-15 17:55:00,accel_load_accum,582.717292,PLAYER_1190,Mens Basketball
+7966,2023-09-15 17:55:00,distance_total,3551.484627,PLAYER_1190,Mens Basketball
+7967,2023-09-14 17:20:00,accel_load_accum,674.614395,PLAYER_1190,Mens Basketball
+7968,2023-09-14 17:20:00,distance_total,4941.728744,PLAYER_1190,Mens Basketball
+7969,2023-09-13 18:00:19,accel_load_accum,736.600405,PLAYER_1190,Mens Basketball
+7970,2023-09-13 18:00:19,distance_total,4833.353294,PLAYER_1190,Mens Basketball
+7971,2023-09-12 18:00:47,accel_load_accum,726.308299,PLAYER_1190,Mens Basketball
+7972,2023-09-12 18:00:47,distance_total,4621.481474,PLAYER_1190,Mens Basketball
+7973,2023-09-09 14:20:00,accel_load_accum,672.905203,PLAYER_1190,Mens Basketball
+7974,2023-09-09 14:20:00,distance_total,4440.034816,PLAYER_1190,Mens Basketball
+7975,2023-09-08 22:30:00,accel_load_accum,19.751531,PLAYER_1190,Mens Basketball
+7976,2023-09-08 22:30:00,distance_total,121.206695,PLAYER_1190,Mens Basketball
+7977,2023-09-08 13:45:51,accel_load_accum,390.540135,PLAYER_1190,Mens Basketball
+7978,2023-09-08 13:45:51,distance_total,2578.219197,PLAYER_1190,Mens Basketball
+7979,2023-09-08 12:30:00,accel_load_accum,1021.838823,PLAYER_1190,Mens Basketball
+7980,2023-09-08 12:30:00,distance_total,6871.420692,PLAYER_1190,Mens Basketball
+7981,2023-09-07 17:20:00,accel_load_accum,377.937617,PLAYER_1190,Mens Basketball
+7982,2023-09-07 17:20:00,distance_total,2892.911192,PLAYER_1190,Mens Basketball
+7983,2023-09-06 20:00:00,accel_load_accum,1097.600067,PLAYER_1190,Mens Basketball
+7984,2023-09-06 20:00:00,distance_total,7569.858508,PLAYER_1190,Mens Basketball
+7985,2023-09-05 17:25:00,accel_load_accum,770.4328,PLAYER_1190,Mens Basketball
+7986,2023-09-05 17:25:00,distance_total,5465.083134,PLAYER_1190,Mens Basketball
+7987,2023-09-04 17:00:00,accel_load_accum,530.103719,PLAYER_1190,Mens Basketball
+7988,2023-09-04 17:00:00,distance_total,3108.867371,PLAYER_1190,Mens Basketball
+7989,2023-09-02 22:00:00,accel_load_accum,989.076084,PLAYER_1190,Mens Basketball
+7990,2023-09-02 22:00:00,distance_total,6425.103509,PLAYER_1190,Mens Basketball
+7991,2023-09-02 17:45:00,accel_load_accum,616.484157,PLAYER_1190,Mens Basketball
+7992,2023-09-02 17:45:00,distance_total,4230.870282,PLAYER_1190,Mens Basketball
+7993,2023-09-01 18:30:00,accel_load_accum,1014.138399,PLAYER_1190,Mens Basketball
+7994,2023-09-01 18:30:00,distance_total,6831.334765,PLAYER_1190,Mens Basketball
+7995,2023-08-31 20:10:00,accel_load_accum,374.581149,PLAYER_1190,Mens Basketball
+7996,2023-08-31 20:10:00,distance_total,2728.578933,PLAYER_1190,Mens Basketball
+7997,2023-08-30 17:20:00,distance_total,4692.246874,PLAYER_1190,Mens Basketball
+7998,2023-08-30 17:20:00,accel_load_accum,683.369441,PLAYER_1190,Mens Basketball
+7999,2023-08-29 17:15:00,accel_load_accum,767.237139,PLAYER_1190,Mens Basketball
+8000,2023-08-29 17:15:00,distance_total,5291.855511,PLAYER_1190,Mens Basketball
+8001,2023-08-28 17:55:00,accel_load_accum,779.796399,PLAYER_1190,Mens Basketball
+8002,2023-08-28 17:55:00,distance_total,5516.187261,PLAYER_1190,Mens Basketball
+8003,2023-08-26 19:00:00,accel_load_accum,740.402499,PLAYER_1190,Womens Basketball
+8004,2023-08-26 19:00:00,distance_total,4668.269118,PLAYER_1190,Womens Basketball
+8005,2023-08-25 17:50:00,accel_load_accum,773.790664,PLAYER_1190,Womens Basketball
+8006,2023-08-25 17:50:00,distance_total,5025.079711,PLAYER_1190,Womens Basketball
+8007,2023-08-25 14:00:00,accel_load_accum,791.836975,PLAYER_1190,Womens Basketball
+8008,2023-08-25 14:00:00,distance_total,5149.968083,PLAYER_1190,Womens Basketball
+8009,2023-08-24 20:40:00,accel_load_accum,448.423032,PLAYER_1190,Womens Basketball
+8010,2023-08-24 20:40:00,distance_total,3162.586098,PLAYER_1190,Womens Basketball
+8011,2023-08-23 12:45:00,accel_load_accum,1095.520438,PLAYER_1190,Womens Basketball
+8012,2023-08-23 12:45:00,distance_total,7510.647638,PLAYER_1190,Womens Basketball
+8013,2023-08-22 19:15:00,accel_load_accum,324.441656,PLAYER_1190,Womens Basketball
+8014,2023-08-22 19:15:00,distance_total,2685.295572,PLAYER_1190,Womens Basketball
+8015,2023-08-22 13:15:00,accel_load_accum,721.503487,PLAYER_1190,Womens Basketball
+8016,2023-08-22 13:15:00,distance_total,4707.182815,PLAYER_1190,Womens Basketball
+8017,2023-08-20 13:15:00,accel_load_accum,650.657743,PLAYER_1190,Womens Basketball
+8018,2023-08-20 13:15:00,distance_total,4256.940464,PLAYER_1190,Womens Basketball
+8019,2023-08-19 19:30:00,accel_load_accum,858.355799,PLAYER_1190,Womens Basketball
+8020,2023-08-19 19:30:00,distance_total,5670.048405,PLAYER_1190,Womens Basketball
+8021,2023-08-19 15:00:00,accel_load_accum,559.870153,PLAYER_1190,Womens Basketball
+8022,2023-08-19 15:00:00,distance_total,3908.314893,PLAYER_1190,Womens Basketball
+8023,2023-08-17 16:30:00,accel_load_accum,968.001045,PLAYER_1190,Womens Basketball
+8024,2023-08-17 16:30:00,distance_total,6063.074736,PLAYER_1190,Womens Basketball
+8025,2023-08-16 20:00:00,accel_load_accum,891.260946,PLAYER_1190,Womens Basketball
+8026,2023-08-16 20:00:00,distance_total,5636.784124,PLAYER_1190,Womens Basketball
+8027,2023-08-16 13:15:00,accel_load_accum,842.009661,PLAYER_1190,Womens Basketball
+8028,2023-08-16 13:15:00,distance_total,5454.600157,PLAYER_1190,Womens Basketball
+8029,2023-08-15 14:45:00,accel_load_accum,874.357329,PLAYER_1190,Womens Basketball
+8030,2023-08-15 14:45:00,distance_total,5762.33002,PLAYER_1190,Womens Basketball
+8031,2023-08-13 19:30:00,accel_load_accum,979.682732,PLAYER_1190,Womens Basketball
+8032,2023-08-13 19:30:00,distance_total,6829.409912,PLAYER_1190,Womens Basketball
+8033,2023-08-13 13:15:00,accel_load_accum,752.280812,PLAYER_1190,Womens Basketball
+8034,2023-08-13 13:15:00,distance_total,4899.412344,PLAYER_1190,Womens Basketball
+8035,2023-08-12 20:05:00,accel_load_accum,593.719968,PLAYER_1190,Womens Basketball
+8036,2023-08-12 20:05:00,distance_total,4680.042197,PLAYER_1190,Womens Basketball
+8037,2023-08-12 13:15:00,accel_load_accum,712.295717,PLAYER_1190,Womens Basketball
+8038,2023-08-12 13:15:00,distance_total,4965.779147,PLAYER_1190,Womens Basketball
+8039,2023-08-11 19:25:00,accel_load_accum,893.463469,PLAYER_1190,Womens Basketball
+8040,2023-08-11 19:25:00,distance_total,5748.935895,PLAYER_1190,Womens Basketball
+8041,2023-08-10 19:30:00,accel_load_accum,757.61848,PLAYER_1190,Womens Basketball
+8042,2023-08-10 19:30:00,distance_total,5139.331574,PLAYER_1190,Womens Basketball
+8043,2023-08-10 13:10:00,accel_load_accum,759.146495,PLAYER_1190,Womens Basketball
+8044,2023-08-10 13:10:00,distance_total,4829.279674,PLAYER_1190,Womens Basketball
+8045,2023-08-09 13:15:00,accel_load_accum,725.090656,PLAYER_1190,Womens Basketball
+8046,2023-08-09 13:15:00,distance_total,4511.179997,PLAYER_1190,Womens Basketball
+8047,2023-08-08 20:30:00,accel_load_accum,346.184751,PLAYER_1190,Womens Basketball
+8048,2023-08-08 20:30:00,distance_total,2567.971836,PLAYER_1190,Womens Basketball
+8049,2023-08-08 13:15:00,accel_load_accum,795.234968,PLAYER_1190,Womens Basketball
+8050,2023-08-08 13:15:00,distance_total,5005.664861,PLAYER_1190,Womens Basketball
+8051,2023-08-07 13:20:16,accel_load_accum,364.731536,PLAYER_1190,Mens Basketball
+8052,2023-08-07 13:20:16,distance_total,2513.891576,PLAYER_1190,Mens Basketball
+8053,2023-08-04 15:37:00,accel_load_accum,400.080209,PLAYER_1190,Mens Basketball
+8054,2023-08-04 15:37:00,distance_total,2924.365698,PLAYER_1190,Mens Basketball
+8055,2023-08-03 16:00:00,accel_load_accum,355.976587,PLAYER_1190,Mens Basketball
+8056,2023-08-03 16:00:00,distance_total,2579.252455,PLAYER_1190,Mens Basketball
+8057,2023-08-02 15:55:00,accel_load_accum,431.733278,PLAYER_1190,Mens Basketball
+8058,2023-08-02 15:55:00,distance_total,2949.386044,PLAYER_1190,Mens Basketball
+8059,2023-08-01 16:00:00,accel_load_accum,245.964892,PLAYER_1190,Mens Basketball
+8060,2023-08-01 16:00:00,distance_total,1580.299614,PLAYER_1190,Mens Basketball
+8061,2023-07-31 16:00:00,accel_load_accum,382.499729,PLAYER_1190,Mens Basketball
+8062,2023-07-31 16:00:00,distance_total,2488.202889,PLAYER_1190,Mens Basketball
+8063,2023-07-28 10:55:00,accel_load_accum,246.135336,PLAYER_1190,Mens Basketball
+8064,2023-07-28 10:55:00,distance_total,2273.134256,PLAYER_1190,Mens Basketball
+8065,2023-07-27 10:57:16,accel_load_accum,117.869633,PLAYER_1190,Mens Basketball
+8066,2023-07-27 10:57:16,distance_total,841.714875,PLAYER_1190,Mens Basketball
+8067,2023-07-26 11:36:48,leftMaxForce,507.75,PLAYER_1190,Volleyball
+8068,2023-07-26 11:36:48,leftTorque,198.784125,PLAYER_1190,Volleyball
+8069,2023-07-26 11:36:48,rightMaxForce,361.5,PLAYER_1190,Volleyball
+8070,2023-07-26 11:36:48,rightTorque,141.52725,PLAYER_1190,Volleyball
+8071,2023-07-26 10:52:00,accel_load_accum,134.031917,PLAYER_1190,Mens Basketball
+8072,2023-07-26 10:52:00,distance_total,863.325434,PLAYER_1190,Mens Basketball
+8073,2023-07-20 12:15:00,accel_load_accum,1.118907,PLAYER_1190,Mens Basketball
+8074,2023-07-07 16:45:26,accel_load_accum,2.985718,PLAYER_1190,Mens Basketball
+8075,2023-07-07 16:45:26,distance_total,7.947297,PLAYER_1190,Mens Basketball
+8076,2023-07-06 11:24:05,leftMaxForce,440.75,PLAYER_1190,Volleyball
+8077,2023-07-06 11:24:05,leftTorque,172.553625,PLAYER_1190,Volleyball
+8078,2023-07-06 11:24:05,rightMaxForce,414.5,PLAYER_1190,Volleyball
+8079,2023-07-06 11:24:05,rightTorque,162.27675,PLAYER_1190,Volleyball
+8080,2023-04-27 15:56:21,leftMaxForce,458.25,PLAYER_1190,Volleyball
+8081,2023-04-27 15:56:21,leftTorque,179.404875,PLAYER_1190,Volleyball
+8082,2023-04-27 15:56:21,rightMaxForce,472.5,PLAYER_1190,Volleyball
+8083,2023-04-27 15:56:21,rightTorque,184.98375,PLAYER_1190,Volleyball
+8084,2023-04-03 19:31:06,leftMaxForce,357.75,PLAYER_1190,Volleyball
+8085,2023-04-03 19:31:06,leftTorque,140.059125,PLAYER_1190,Volleyball
+8086,2023-04-03 19:31:06,rightMaxForce,417.75,PLAYER_1190,Volleyball
+8087,2023-04-03 19:31:06,rightTorque,163.549125,PLAYER_1190,Volleyball
+8088,2023-03-10 20:24:37,leftMaxForce,352.75,PLAYER_1190,Volleyball
+8089,2023-03-10 20:24:37,leftTorque,138.101625,PLAYER_1190,Volleyball
+8090,2023-03-10 20:24:37,rightMaxForce,378.5,PLAYER_1190,Volleyball
+8091,2023-03-10 20:24:37,rightTorque,148.18275,PLAYER_1190,Volleyball
+8092,2023-02-17 20:40:45,leftMaxForce,333.0,PLAYER_1190,Volleyball
+8093,2023-02-17 20:40:45,leftTorque,130.3695,PLAYER_1190,Volleyball
+8094,2023-02-17 20:40:45,rightMaxForce,398.75,PLAYER_1190,Volleyball
+8095,2023-02-17 20:40:45,rightTorque,156.110625,PLAYER_1190,Volleyball
+8096,2023-01-27 20:48:38,leftMaxForce,381.5,PLAYER_1190,Volleyball
+8097,2023-01-27 20:48:38,leftTorque,149.35725,PLAYER_1190,Volleyball
+8098,2023-01-27 20:48:38,rightMaxForce,376.0,PLAYER_1190,Volleyball
+8099,2023-01-27 20:48:38,rightTorque,147.204,PLAYER_1190,Volleyball
+8100,2022-09-06 18:02:16,leftMaxForce,371.0,PLAYER_1190,Volleyball
+8101,2022-09-06 18:02:16,leftTorque,145.2465,PLAYER_1190,Volleyball
+8102,2022-09-06 18:02:16,rightMaxForce,385.75,PLAYER_1190,Volleyball
+8103,2022-09-06 18:02:16,rightTorque,151.021125,PLAYER_1190,Volleyball
+8104,2022-08-09 21:11:30,leftMaxForce,367.75,PLAYER_1190,Volleyball
+8105,2022-08-09 21:11:30,leftTorque,143.974125,PLAYER_1190,Volleyball
+8106,2022-08-09 21:11:30,rightMaxForce,375.0,PLAYER_1190,Volleyball
+8107,2022-08-09 21:11:30,rightTorque,146.8125,PLAYER_1190,Volleyball
+8108,2022-07-29 11:09:02,leftMaxForce,348.25,PLAYER_1190,Volleyball
+8109,2022-07-29 11:09:02,leftTorque,136.339875,PLAYER_1190,Volleyball
+8110,2022-07-29 11:09:02,rightMaxForce,390.75,PLAYER_1190,Volleyball
+8111,2022-07-29 11:09:02,rightTorque,152.978625,PLAYER_1190,Volleyball
+8112,2022-07-06 11:28:07,leftMaxForce,365.75,PLAYER_1190,Volleyball
+8113,2022-07-06 11:28:07,leftTorque,143.191125,PLAYER_1190,Volleyball
+8114,2022-07-06 11:28:07,rightMaxForce,388.25,PLAYER_1190,Volleyball
+8115,2022-07-06 11:28:07,rightTorque,151.999875,PLAYER_1190,Volleyball
+8116,2021-11-17 18:00:00,accel_load_accum,836.509226,PLAYER_1190,Mens Basketball
+8117,2021-11-17 18:00:00,distance_total,4742.775489,PLAYER_1190,Mens Basketball
+8118,2021-11-16 17:15:00,accel_load_accum,916.229444,PLAYER_1190,Mens Basketball
+8119,2021-11-16 17:15:00,distance_total,5276.243005,PLAYER_1190,Mens Basketball
+8120,2021-11-15 18:00:00,accel_load_accum,924.619736,PLAYER_1190,Mens Basketball
+8121,2021-11-15 18:00:00,distance_total,5827.815113,PLAYER_1190,Mens Basketball
+8122,2021-11-11 16:03:17,accel_load_accum,404.852305,PLAYER_1190,Mens Basketball
+8123,2021-11-11 16:03:17,distance_total,2580.283788,PLAYER_1190,Mens Basketball
+8124,2021-11-10 18:00:00,accel_load_accum,940.565786,PLAYER_1190,Mens Basketball
+8125,2021-11-10 18:00:00,distance_total,5655.174331,PLAYER_1190,Mens Basketball
+8126,2021-11-09 17:40:43,accel_load_accum,696.921944,PLAYER_1190,Mens Basketball
+8127,2021-11-09 17:40:43,distance_total,4461.196373,PLAYER_1190,Mens Basketball
+8128,2021-11-04 15:30:42,accel_load_accum,926.607596,PLAYER_1190,Mens Basketball
+8129,2021-11-04 15:30:42,distance_total,5834.995765,PLAYER_1190,Mens Basketball
+8130,2021-11-04 14:16:18,accel_load_accum,527.896608,PLAYER_1190,Mens Basketball
+8131,2021-11-04 14:16:18,distance_total,3236.010109,PLAYER_1190,Mens Basketball
+8132,2021-11-03 17:00:26,accel_load_accum,831.564988,PLAYER_1190,Mens Basketball
+8133,2021-11-03 17:00:26,distance_total,4994.834506,PLAYER_1190,Mens Basketball
+8134,2021-11-03 14:24:50,accel_load_accum,21.843633,PLAYER_1190,Mens Basketball
+8135,2021-11-03 14:24:50,distance_total,9.257719,PLAYER_1190,Mens Basketball
+8136,2021-10-28 13:58:40,accel_load_accum,10.444652,PLAYER_1190,Mens Basketball
+8137,2021-10-28 13:58:40,distance_total,0.125623,PLAYER_1190,Mens Basketball
+8138,2021-10-27 17:00:23,accel_load_accum,951.176598,PLAYER_1190,Mens Basketball
+8139,2021-10-27 17:00:23,distance_total,5731.952325,PLAYER_1190,Mens Basketball
+8140,2021-10-26 16:45:46,accel_load_accum,438.677028,PLAYER_1190,Mens Basketball
+8141,2021-10-26 16:45:46,distance_total,2853.593331,PLAYER_1190,Mens Basketball
+8142,2021-10-26 14:14:01,accel_load_accum,9.000809,PLAYER_1190,Mens Basketball
+8143,2021-10-26 14:14:01,distance_total,3.178666,PLAYER_1190,Mens Basketball
+8144,2021-10-21 15:30:07,accel_load_accum,789.785351,PLAYER_1190,Mens Basketball
+8145,2021-10-21 15:30:07,distance_total,4983.073984,PLAYER_1190,Mens Basketball
+8146,2021-10-21 14:20:51,accel_load_accum,374.706834,PLAYER_1190,Mens Basketball
+8147,2021-10-21 14:20:51,distance_total,2371.733151,PLAYER_1190,Mens Basketball
+8148,2021-10-20 17:00:00,accel_load_accum,891.44444,PLAYER_1190,Mens Basketball
+8149,2021-10-20 17:00:00,distance_total,5576.904209,PLAYER_1190,Mens Basketball
+8150,2021-10-19 16:15:00,accel_load_accum,855.717181,PLAYER_1190,Mens Basketball
+8151,2021-10-19 16:15:00,distance_total,5106.968103,PLAYER_1190,Mens Basketball
+8152,2021-10-19 14:10:33,accel_load_accum,34.862499,PLAYER_1190,Mens Basketball
+8153,2021-10-19 14:10:33,distance_total,234.048491,PLAYER_1190,Mens Basketball
+8154,2021-10-13 15:30:36,accel_load_accum,439.53856,PLAYER_1190,Mens Basketball
+8155,2021-10-13 15:30:36,distance_total,2695.423278,PLAYER_1190,Mens Basketball
+8156,2021-10-11 14:22:54,accel_load_accum,31.697746,PLAYER_1190,Mens Basketball
+8157,2021-10-11 14:22:54,distance_total,267.080568,PLAYER_1190,Mens Basketball
+8158,2021-10-08 22:00:28,accel_load_accum,1133.645598,PLAYER_1190,Mens Basketball
+8159,2021-10-08 22:00:28,distance_total,6659.869022,PLAYER_1190,Mens Basketball
+8160,2021-10-07 15:30:45,accel_load_accum,891.125139,PLAYER_1190,Mens Basketball
+8161,2021-10-07 15:30:45,distance_total,6012.648786,PLAYER_1190,Mens Basketball
+8162,2021-10-06 17:00:12,accel_load_accum,853.733083,PLAYER_1190,Mens Basketball
+8163,2021-10-06 17:00:12,distance_total,4914.13233,PLAYER_1190,Mens Basketball
+8164,2021-10-05 16:30:16,accel_load_accum,720.59553,PLAYER_1190,Mens Basketball
+8165,2021-10-05 16:30:16,distance_total,4233.947233,PLAYER_1190,Mens Basketball
+8166,2021-10-05 14:18:59,accel_load_accum,187.79178,PLAYER_1190,Mens Basketball
+8167,2021-10-05 14:18:59,distance_total,1251.619857,PLAYER_1190,Mens Basketball
+8168,2021-09-30 15:30:00,accel_load_accum,932.260128,PLAYER_1190,Mens Basketball
+8169,2021-09-30 15:30:00,distance_total,5722.97988,PLAYER_1190,Mens Basketball
+8170,2021-09-29 17:00:28,accel_load_accum,948.901636,PLAYER_1190,Mens Basketball
+8171,2021-09-29 17:00:28,distance_total,5603.050383,PLAYER_1190,Mens Basketball
+8172,2021-09-28 15:30:54,accel_load_accum,825.588572,PLAYER_1190,Mens Basketball
+8173,2021-09-28 15:30:54,distance_total,5243.458736,PLAYER_1190,Mens Basketball
+8174,2021-09-28 13:59:16,accel_load_accum,237.41887,PLAYER_1190,Mens Basketball
+8175,2021-09-28 13:59:16,distance_total,1572.237375,PLAYER_1190,Mens Basketball
+8176,2021-09-27 17:30:00,accel_load_accum,394.951649,PLAYER_1190,Mens Basketball
+8177,2021-09-27 17:30:00,distance_total,2189.287964,PLAYER_1190,Mens Basketball
+8178,2021-09-22 17:00:39,accel_load_accum,694.792886,PLAYER_1190,Mens Basketball
+8179,2021-09-22 17:00:39,distance_total,4084.271901,PLAYER_1190,Mens Basketball
+8180,2021-09-10 20:00:12,accel_load_accum,957.685919,PLAYER_1190,Mens Basketball
+8181,2021-09-10 20:00:12,distance_total,5623.322104,PLAYER_1190,Mens Basketball
+8182,2021-09-07 22:00:10,accel_load_accum,500.546974,PLAYER_1190,Mens Basketball
+8183,2021-09-07 22:00:10,distance_total,2846.377901,PLAYER_1190,Mens Basketball
+8184,2021-09-01 17:00:32,accel_load_accum,1209.055033,PLAYER_1190,Mens Basketball
+8185,2021-09-01 17:00:32,distance_total,7176.808488,PLAYER_1190,Mens Basketball
+8186,2021-08-31 14:00:44,accel_load_accum,163.064057,PLAYER_1190,Mens Basketball
+8187,2021-08-31 14:00:44,distance_total,910.148068,PLAYER_1190,Mens Basketball
+8188,2021-08-30 17:00:25,accel_load_accum,1045.746427,PLAYER_1190,Mens Basketball
+8189,2021-08-30 17:00:25,distance_total,6436.129988,PLAYER_1190,Mens Basketball
+8190,2021-08-25 15:56:46,accel_load_accum,968.636324,PLAYER_1190,Mens Basketball
+8191,2021-08-25 15:56:46,distance_total,5899.048596,PLAYER_1190,Mens Basketball
+8192,2021-08-24 15:19:03,accel_load_accum,1012.857752,PLAYER_1190,Mens Basketball
+8193,2021-08-24 15:19:03,distance_total,6519.90462,PLAYER_1190,Mens Basketball

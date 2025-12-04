@@ -1,0 +1,9 @@
+,timestamp,metric,value,playername,team
+4296,2025-09-02 15:05:48,leftMaxForce,451.0,PLAYER_1096,Women's Basketball
+4297,2025-09-02 15:05:48,leftTorque,221.2155,PLAYER_1096,Women's Basketball
+4298,2025-09-02 15:05:48,rightMaxForce,340.25,PLAYER_1096,Women's Basketball
+4299,2025-09-02 15:05:48,rightTorque,166.892625,PLAYER_1096,Women's Basketball
+4300,2025-06-30 16:56:50,leftMaxForce,370.25,PLAYER_1096,Women's Basketball
+4301,2025-06-30 16:56:50,leftTorque,181.607625,PLAYER_1096,Women's Basketball
+4302,2025-06-30 16:56:50,rightMaxForce,423.0,PLAYER_1096,Women's Basketball
+4303,2025-06-30 16:56:50,rightTorque,207.4815,PLAYER_1096,Women's Basketball

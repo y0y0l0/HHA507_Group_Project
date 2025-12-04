@@ -1,0 +1,5 @@
+,timestamp,metric,value,playername,team
+11766,2022-08-31 19:15:57,leftMaxForce,146.5,PLAYER_254,Swim/Dive
+11767,2022-08-31 19:15:57,leftTorque,67.90275,PLAYER_254,Swim/Dive
+11768,2022-08-31 19:15:57,rightMaxForce,187.25,PLAYER_254,Swim/Dive
+11769,2022-08-31 19:15:57,rightTorque,86.790375,PLAYER_254,Swim/Dive

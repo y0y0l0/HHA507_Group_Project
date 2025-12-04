@@ -1,0 +1,5 @@
+,timestamp,metric,value,playername,team
+26094,2023-12-06 15:23:44,leftMaxForce,589.5,PLAYER_940,Track
+26095,2023-12-06 15:23:44,leftTorque,246.70575,PLAYER_940,Track
+26096,2023-12-06 15:23:44,rightMaxForce,416.75,PLAYER_940,Track
+26097,2023-12-06 15:23:44,rightTorque,174.409875,PLAYER_940,Track

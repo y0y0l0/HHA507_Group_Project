@@ -1,6 +1,6 @@
 import platform as platform
 import numpy as np
-from common_clean_functions import get_athletes_not_tested_in_last_num_days,get_all_clean_metrics_records
+from common_clean_functions import get_athletes_not_tested_in_last_num_days,get_all_clean_metrics_records, get_data_in_wide_format_by_athlete_and_metric
 
 ##4.1 Identify athletes who haven't been tested in the last 30 days(for your selected metrics)
 get_athletes_not_tested_in_last_num_days(30,"4.1")
@@ -19,4 +19,12 @@ athletes_at_risk_based_on_asymmetrical_difference['Injury_Risk_Level'] = np.sele
     ['Normal or Low', 'At Risk', 'HIGH Risk'],
     default='Normal or Low'
 )
+
 athletes_at_risk_based_on_asymmetrical_difference.to_csv('output/4.1-athletes_at_risk_based_on_asymmetrical_difference.csv')
+# Get list of unique playernames flagged as 'At Risk' or 'HIGH Risk'
+athletes_flagged_for_injury_risk = athletes_at_risk_based_on_asymmetrical_difference[athletes_at_risk_based_on_asymmetrical_difference['Injury_Risk_Level'].isin(['At Risk', 'HIGH Risk'])]
+flagged_for_injury_risk = athletes_flagged_for_injury_risk['playername'].unique().tolist()
+
+metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
+# Generate individual report for all athletes flagged as 'At Risk' or 'HIGH Risk' for selected metrics
+get_data_in_wide_format_by_athlete_and_metric("riskyBusiness/4.1", metric_list, flagged_for_injury_risk,"wide")

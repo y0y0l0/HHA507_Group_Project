@@ -183,10 +183,11 @@ def get_data_in_wide_format_by_athlete_and_metric(report_prefix: str,input_metri
     else:
         #loop through input lists to create single quote comma-separated parameter for playernames
         for playername in input_playername_list:
-            playername_list = playername_list +"\'" +  playername + "',"
-            playername_list = playername_list.rstrip(",")
-            print(f"metric_list: {metric_list}")
-            print(f"playername_list: {playername_list}")
+            playername_list = playername_list + "\'" + playername + "',"
+        if playername_list.endswith(","):
+            playername_list = playername_list[:-1]
+        print(f"metric_list: {metric_list}")
+        print(f"playername_list: {playername_list}")
         ## get player metric data in wide format based on the provided list of metrics requested among clean data sets where the team is valid and the metric is not null.
         sql_test_query = (
             f"SELECT timestamp, metric, value, playername, team "

@@ -1,0 +1,23 @@
+,timestamp,metric,value,playername,team
+12722,2024-04-02 16:58:40,leftMaxForce,266.0,PLAYER_385,Women's Lacrosse
+12723,2024-04-02 16:58:40,rightMaxForce,249.25,PLAYER_385,Women's Lacrosse
+12724,2024-01-18 18:01:53,leftMaxForce,266.75,PLAYER_385,Women's Lacrosse
+12725,2024-01-18 18:01:53,leftTorque,111.634875,PLAYER_385,Women's Lacrosse
+12726,2024-01-18 18:01:53,rightMaxForce,232.75,PLAYER_385,Women's Lacrosse
+12727,2024-01-18 18:01:53,rightTorque,97.405875,PLAYER_385,Women's Lacrosse
+12728,2023-11-30 17:37:53,leftMaxForce,189.0,PLAYER_385,Women's Lacrosse
+12729,2023-11-30 17:37:53,leftTorque,79.0965,PLAYER_385,Women's Lacrosse
+12730,2023-11-30 17:37:53,rightMaxForce,185.0,PLAYER_385,Women's Lacrosse
+12731,2023-11-30 17:37:53,rightTorque,77.4225,PLAYER_385,Women's Lacrosse
+12732,2023-11-28 17:06:32,leftMaxForce,261.25,PLAYER_385,Women's Lacrosse
+12733,2023-11-28 17:06:32,leftTorque,109.333125,PLAYER_385,Women's Lacrosse
+12734,2023-11-28 17:06:32,rightMaxForce,250.0,PLAYER_385,Women's Lacrosse
+12735,2023-11-28 17:06:32,rightTorque,104.625,PLAYER_385,Women's Lacrosse
+12736,2023-11-06 18:06:22,leftMaxForce,231.25,PLAYER_385,Women's Lacrosse
+12737,2023-11-06 18:06:22,leftTorque,96.778125,PLAYER_385,Women's Lacrosse
+12738,2023-11-06 18:06:22,rightMaxForce,184.0,PLAYER_385,Women's Lacrosse
+12739,2023-11-06 18:06:22,rightTorque,77.004,PLAYER_385,Women's Lacrosse
+12740,2023-08-31 13:16:55,leftMaxForce,226.0,PLAYER_385,Women's Lacrosse
+12741,2023-08-31 13:16:55,leftTorque,94.581,PLAYER_385,Women's Lacrosse
+12742,2023-08-31 13:16:55,rightMaxForce,201.0,PLAYER_385,Women's Lacrosse
+12743,2023-08-31 13:16:55,rightTorque,84.1185,PLAYER_385,Women's Lacrosse

@@ -1,0 +1,5 @@
+,timestamp,metric,value,playername,team
+9487,2021-03-29 19:22:58,leftMaxForce,394.0,PLAYER_141,Baseball
+9488,2021-03-29 19:22:58,leftTorque,189.711,PLAYER_141,Baseball
+9489,2021-03-29 19:22:58,rightMaxForce,483.75,PLAYER_141,Baseball
+9490,2021-03-29 19:22:58,rightTorque,232.925625,PLAYER_141,Baseball

@@ -1,0 +1,9 @@
+,timestamp,metric,value,playername,team
+0,2024-10-30 17:55:56,leftMaxForce,462.5,PLAYER_005,Men's Soccer
+1,2024-10-30 17:55:56,leftTorque,214.36875,PLAYER_005,Men's Soccer
+2,2024-10-30 17:55:56,rightMaxForce,375.75,PLAYER_005,Men's Soccer
+3,2024-10-30 17:55:56,rightTorque,174.160125,PLAYER_005,Men's Soccer
+4,2024-08-06 14:24:21,leftMaxForce,351.0,PLAYER_005,Men's Soccer
+5,2024-08-06 14:24:21,leftTorque,162.6885,PLAYER_005,Men's Soccer
+6,2024-08-06 14:24:21,rightMaxForce,312.75,PLAYER_005,Men's Soccer
+7,2024-08-06 14:24:21,rightTorque,144.959625,PLAYER_005,Men's Soccer

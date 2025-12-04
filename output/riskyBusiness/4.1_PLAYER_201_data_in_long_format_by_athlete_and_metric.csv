@@ -1,0 +1,5 @@
+,timestamp,metric,value,playername,team
+10087,2025-09-08 11:51:35,leftMaxForce,357.25,PLAYER_201,Mens Lax
+10088,2025-09-08 11:51:35,leftTorque,165.585375,PLAYER_201,Mens Lax
+10089,2025-09-08 11:51:35,rightMaxForce,273.0,PLAYER_201,Mens Lax
+10090,2025-09-08 11:51:35,rightTorque,126.5355,PLAYER_201,Mens Lax
