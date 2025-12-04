@@ -263,10 +263,10 @@ def get_all_clean_metrics_records() -> int:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
-def get_all_clean_metrics_records(report_type:str) -> int:
+def get_all_clean_metrics_records(report_type:str) -> pd.DataFrame:
     """Get all records from the database with clean metrics.
     Returns:
-        int: The number of records retrieved.
+        dataframe: The number of records retrieved.
         csv: A CSV file containing all records.
     """
     ## How many unique athlete are in the database?
@@ -301,5 +301,3 @@ def get_all_clean_metrics_records(report_type:str) -> int:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
-
-
