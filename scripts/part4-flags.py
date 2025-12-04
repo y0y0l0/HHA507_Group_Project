@@ -28,4 +28,4 @@ flagged_for_injury_risk = athletes_flagged_for_injury_risk['playername'].unique(
 metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
 # Generate individual report for all athletes flagged as 'At Risk' or 'HIGH Risk' for selected metrics
 athletes_at_risk = get_data_in_wide_format_by_athlete_and_metric("riskyBusiness/4.1", metric_list, flagged_for_injury_risk,"wide")
-athletes_at_risk.to_csv('output/4.1_flagged_for_injury_risk.csv')
+athletes_at_risk.to_csv('output/4.1_part4_flagged_athletes.csv')

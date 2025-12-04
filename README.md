@@ -269,7 +269,7 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 - Deviation from team norms
 - Justify your thresholds using evidence from your literature review
 - Create a script that identifies athletes meeting your flag criteria
-- Output a CSV with: playername, team, flag reason, metric value, last test date `part4_flagged_athletes.csv`
+- Output a CSV with: playername, team, flag reason, metric value, last test date `4.1_part4_flagged_athletes.csv`
 - `4.2` Research Synthesis & Recommendations (Group)
  Synthesize your findings into a research report (3-4 pages) that includes:
  - `Introduction:` Your research question and why it matters (based on literature gaps)
