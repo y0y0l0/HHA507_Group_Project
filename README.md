@@ -103,7 +103,8 @@ Individual team members set up their local database connections using the provid
     2. Lists the top 10 most common metrics for Kinexon data (filter by data_source = 'Kinexon')
             * Identify the most frequently recorded metrics in the Kinexon dataset (this data includes invalid entries).*
                 -The top 10 most common metrics for Kinexon data are:
-            ``` ________________________________________________________________________ 
+            ```
+             ________________________________________________________________________ 
                 |         | metric                                     |  metric_count  |
                 |---------|--------------------------------------------|----------------|
                 |0        | track_outside_field                        |40803           |
@@ -120,7 +121,7 @@ Individual team members set up their local database connections using the provid
     4. Lists the top 10 most common metrics for Vald data (filter by data_source = 'Vald')
             * Identify the most frequently recorded metrics in the Vald dataset (this data includes invalid entries).*
                 -The top 10 most common metrics for Vald data are:
-           ```
+            ```
                 _________________________________________________________________________
                 |         | metric                                     |  metric_count  |
                 |---------|--------------------------------------------|----------------|
