@@ -53,10 +53,9 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
 - Generate summary statistics
 ### Data Setup (Individual)
 Individual team members set up their local database connections using the provided scripts and screenshots are found in the `1.1 Team Database Setup Screenshots/` directory.
+- The `common_functions.py` script in the `scripts/` directory contains functions to establish
+- The `part_exploration.py` script in the `scripts/` directory contains functions for initial data exploration, including loading datasets, summarizing data, and visualizing key metrics.
 
-# The `common_functions.py` script in the `scripts/` directory contains functions to establish
-
-# The `part_exploration.py` script in the `scripts/` directory contains functions for initial data exploration, including loading datasets, summarizing data, and visualizing key metrics.
 ### 1.2 Data Quality Assessment
 - `1.2` Data Understanding Recap (Group)
     1. Answers to the following questions:
@@ -86,6 +85,7 @@ Individual team members set up their local database connections using the provid
         1. Lists the top 10 most common metrics for Hawkins data (filter by data_source = 'Hawkins')
             * Identify the most frequently recorded metrics in the Hawkins dataset (this data includes invalid entries).*
             The top 10 most common metrics for Hawkins data are:
+            ```
                 _________________________________________________________________________ 
                 |         | metric                                     |  metric_count  |
                 |---------|--------------------------------------------|----------------|
@@ -99,6 +99,7 @@ Individual team members set up their local database connections using the provid
                 |7        |           Peak Propulsive Power(W)         |31295           |
                 |8        |  Avg. Relative Propulsive Force(%)         |31295           |
                 |9        |           Avg. Propulsive Force(N)         |31295           |
+            ```
     2. Lists the top 10 most common metrics for Kinexon data (filter by data_source = 'Kinexon')
             * Identify the most frequently recorded metrics in the Kinexon dataset (this data includes invalid entries).*
                 -The top 10 most common metrics for Kinexon data are:
