@@ -63,24 +63,33 @@ Individual team members set up their local database connections using the provid
     1. Answers to the following questions:
         1. How many unique athletes are in the database?
             * Identify the total number of unique athletes across all datasets.*
+            
             'There are 1287 unique athletes in the database.'
         2. How many different sports/teams are represented?
             * Determine the number of sports teams included in the data (this data is sanitized).*
+            
             'There are Unique sports/teams 89 in the database after removing duplicates and invalid entries ie: 'Unknown','Player Not Found','Graduated (No longer enrolled)'.'
         3. What is the date range of available data?
             * Identify the earliest and latest dates of data collection (this data includes invalid entries).*
+            
             'The creation date range of a data is from 2025-10-21 16:46:54 to 2025-10-21 17:03:12.'
+
             'The timestamp date range of a data is from 2018-10-15 19:27:41 to 2025-10-21 12:24:21'
-        4. Which data source (Hawkins/Kinexon/Vald) has the most records?
+        5. Which data source (Hawkins/Kinexon/Vald) has the most records?
             * Compare the number of records from each data source (this data includes invalid entries).*
+            
             'The data source hawkins has 2492372 records.'
+
             'The data source kinexon has 4073754 records.'
+
             'The data source vald has 51300 records.'
-        5. Are there any athletes with missing or invalid names (this data includes invalid entries)?
+        7. Are there any athletes with missing or invalid names (this data includes invalid entries)?
             * Identify athletes with missing or improperly formatted names (this data includes invalid entries).*
-            -There are no invalid athlete names in the database.
-        6. How many athletes have data from multiple sources (2 or 3 systems) (this data is sanitized)?
+            
+             -There are no invalid athlete names in the database.
+        8. How many athletes have data from multiple sources (2 or 3 systems) (this data is sanitized)?
             * Determine the number of athletes with data from more than one source (this data includes invalid entries).*
+            
             -There are 541 athletes with data from multiple sources.
 - `1.3` Metric Discovery & Selection (Group)
     1. Identify and list the top 10 most common metrics for each data source (Hawkins, Kinexon, Vald)
