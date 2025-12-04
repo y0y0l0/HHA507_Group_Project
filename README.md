@@ -294,22 +294,22 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 Report saved in `part4_research_synthesis.pdf` in the `reports` folder
 - `4.3` Final Presentation (Group)
 -`Introduction (2 min):`
-- Your research question/hypothesis
-- Why it matters (the gap you're addressing)
-- Your selected metrics and why
+    - Your research question/hypothesis
+    - Why it matters (the gap you're addressing)
+    - Your selected metrics and why
 -`Methods (2 min):`
-- Data overview and quality assessment
-- Analysis approach
+    - Data overview and quality assessment
+    - Analysis approach
 -`Key Findings (4 min):`
-- Main results with visualizations
-- Statistical findings
-- Comparison to literature
+    - Main results with visualizations
+    - Statistical findings
+    - Comparison to literature
 -`Practical Applications (2 min):`
-- Your performance monitoring flag system
-- Recommendations for coaches/trainers
-- How your findings fill the identified gap
+    - Your performance monitoring flag system
+    - Recommendations for coaches/trainers
+    - How your findings fill the identified gap
 -`Limitations & Future Work (1 min):`
-- Data challenges you encountered
-- What additional research is needed
+    - Data challenges you encountered
+    - What additional research is needed
 -`Q&A (1-2 min)`
 Presentation slides are found in saved at:  https://docs.google.com/presentation/d/1IiI5CwbIHg4V8L8NR5JBr0AiKxmIxBGMQci9IVsK6oo/edit?usp=sharing and a copy of the slides are stored as `AHI 507_ Sports Data.pptx` in the `reports` folder
