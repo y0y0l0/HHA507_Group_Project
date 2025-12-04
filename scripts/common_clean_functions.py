@@ -233,7 +233,7 @@ def get_mean_value_for_each_team() -> pd.DataFrame:
     response = run_sport_data_query(sql_test_query)
 
     if not response.empty:
-        response.to_csv('output/2.3-1_mean_value_for_each_team.csv', index=False)
+        response.to_csv('output/2.3-1&2_mean_value_for_each_team.csv', index=False)
         print(f"Mean values for each metric by team:")
         current_team = None
         for index, row in response.iterrows():
@@ -280,16 +280,26 @@ def get_all_clean_metrics_records(report_type:str) -> int:
         output_file = 'output/3.2-1_all_clean_metrics_records.csv'
         if report_type.upper() == "WIDE":
             response = response.pivot_table(index=['playername', 'timestamp', 'team','data_source'], columns='metric', values='value').reset_index()
-            output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'\
+            output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'
             
             # data must be pivoted to calculate avg_torque_asymmetry and avg_max_force_asymmetry after pivot - using formula from index 10 in the results analysis on our literature review
             # reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8488821/
-            response['avg_torque_asymmetry'] = ((response['leftTorque'] - response['rightTorque'])/ (response['leftTorque'] + response['rightTorque']) )*100
-            response['avg_max_force_asymmetry'] = ((response['leftMaxForce'] - response['rightMaxForce']) / (response['leftMaxForce'] + response['rightMaxForce']) ) *100
+            
+            # Check if required columns exist before calculating asymmetry
+            if 'leftTorque' in response.columns and 'rightTorque' in response.columns:
+                response['avg_torque_asymmetry'] = ((response['leftTorque'] - response['rightTorque'])/ (response['leftTorque'] + response['rightTorque']) )*100
+            else:
+                print(f"Warning: 'leftTorque' and/or 'rightTorque' columns not found. Available columns: {list(response.columns)}")
+            
+            if 'leftMaxForce' in response.columns and 'rightMaxForce' in response.columns:
+                response['avg_max_force_asymmetry'] = ((response['leftMaxForce'] - response['rightMaxForce']) / (response['leftMaxForce'] + response['rightMaxForce']) ) *100
+            else:
+                print(f"Warning: 'leftMaxForce' and/or 'rightMaxForce' columns not found. Available columns: {list(response.columns)}")
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
+
 

@@ -1,7 +1,15 @@
 # HHA507_Group_Project
 
 Group SBU Sports data Project
-Goal of this project is to analyze sports performance data from multiple sources (Hawkins, Kinexon, Vald) to identify key metrics that can help improve athlete performance and reduce injury risk.
+Goal of this project is to analyze sports performance data from multiple sources (Kinexon and Vald), whether bilateral asymmetry metric differences affect performance metrics (accumulated acceleration load and total distance) that can help improve athlete performance and reduce injury risk.
+# Team Roles:
+- Nina & Yatza: Data Engineer - Responsible for data extraction, transformation.
+- Nina, Katiana, & Yatza: Data Analyst - Focuses on data exploration, visualization, and statistical analysis.
+- Blanca, Katiana, Esquilaure, & Luke: Researcher - Conducts literature review and synthesizes research findings related to sports performance metrics.
+- Nina, & Yatza: Visualization Specialist - Designs and implements visualizations to effectively communicate data insights.
+- Blanca, Nina & Yatza: Project Manager - Oversees project timelines, coordinates team efforts, and ensures deliverables are met.
+- Blanca, Nina, Katiana, Esquilaure, & Luke: Presenter - Prepares and delivers the final presentation of the project findings.
+- Blanca, Yatza: Documentation Specialist - Responsible for maintaining project documentation, including the README file and code comments.
 
 # Team Data Setup:
 link to team database setup screenshots: https://drive.google.com/drive/folders/1bX1Yk2YJH1KX1Z3o1F6gD3fQXK5Jt5vP?usp=sharing
@@ -13,7 +21,16 @@ link to team presendation slides: https://docs.google.com/presentation/d/1IiI5Cw
 link to team literature review: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.es53pvsqyhzj#heading=h.owyzndpwo8a8
 
 # Team Notebooks:
+### Part 3. Visualizations and Analysis
 link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
+### 3.3
+    - https://colab.research.google.com/drive/1jJDtOS29TCApR4HsrWrxdsDtnwxfeMhS?usp=sharing
+### Player 755
+    - Part 1:https://colab.research.google.com/drive/1hVXnwQCo98i74oTtsnyllh1HDIaoZXDD?usp=drive_link
+    - Part 2: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
+### Player 1128
+    - Part 1: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
+    - Part 2: https://colab.research.google.com/drive/12RbkLah6NVb0m_d2NEfvQ1URxCP6Oq7O?usp=drive_link 
 
 ## Project Structure
     HHA507_Group_Project/                  # Root directory
