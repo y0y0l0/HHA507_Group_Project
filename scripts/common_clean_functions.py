@@ -112,8 +112,12 @@ def get_team_percentages_with_athletes_with_at_least_5_measurements() -> int:
         for index, row in response.iterrows():
             print(f"  {row['team']}: {row['percentage']}% ({row['athletes_with_5_plus']}/{row['total_athletes_in_team']})")
     return response
-def get_athletes_not_tested_in_last_num_days(days_ago: int,filePrefixName: str) -> int:
+def get_athletes_not_tested_in_last_num_days(days_ago: int,report_prefix: str) -> int:
     """Get the percentage of athletes not tested in the last 6 months.
+    Args:
+        report_prefix (str): Prefix for the report.
+        days_ago (int): Number of days to look back for testing.
+
     Returns:
         int: The percentage of athletes not tested in the last 6 months.
         csv: A CSV file containing all records.
@@ -132,13 +136,14 @@ def get_athletes_not_tested_in_last_num_days(days_ago: int,filePrefixName: str) 
     response = run_sport_data_query(sql_test_query)
 
     if not response.empty:
-        response.to_csv(f'output/{filePrefixName}_athletes_not_tested_in_last_{days_ago}_days.csv')
+        response.to_csv(f'output/{report_prefix}_athletes_not_tested_in_last_{days_ago}_days.csv')
         print(f"The percentage of athletes NOT tested in the last {days_ago} days for selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}%.")
  
     return response['playername'].unique()
-def get_data_in_wide_format_by_athlete_and_metric(input_metric_list: list, input_playername_list: list, format_type: str) -> pd.DataFrame:
+def get_data_in_wide_format_by_athlete_and_metric(report_prefix: str,input_metric_list: list, input_playername_list: list, format_type: str) -> pd.DataFrame:
     """Get the data in wide format by athlete and metric based on the provides list of metrics and athletes.
     Args:
+        report_prefix (str): Prefix for the report.
         input_metric_list (list): List of metrics to filter the data.
         input_playername_list (list): List of player names to filter the data.
         format_type (str): "wide" for wide format, "long" for long format.
@@ -169,11 +174,11 @@ def get_data_in_wide_format_by_athlete_and_metric(input_metric_list: list, input
             response = run_sport_data_query(sql_test_query)
             if not response.empty:
                 # create a separate csv file of all players data long format
-                response.to_csv('output/2.2_ALL_players_data_in_long_format_by_athlete_and_metric.csv')
+                response.to_csv(f'output/{report_prefix}_ALL_players_data_in_long_format_by_athlete_and_metric.csv')
                     # only create pivoted wide format if requested
                 if format_type == "wide":
                     response_pivot = response.pivot_table(index=['playername', 'timestamp'], columns='metric', values='value').reset_index()
-                    response_pivot.to_csv('output/2.2_ALL_players_data_in_wide_format_by_athlete_and_metric_pivoted.csv')
+                    response_pivot.to_csv(f'output/{report_prefix}_ALL_players_data_in_wide_format_by_athlete_and_metric_pivoted.csv')
                 print(f"Sample raw data for all athletes: {response.head(10)}")
     else:
         #loop through input lists to create single quote comma-separated parameter for playernames
@@ -198,11 +203,11 @@ def get_data_in_wide_format_by_athlete_and_metric(input_metric_list: list, input
             # for each athlete in the input list, create a separate csv file
             for player in input_playername_list:
                 player_data = response[response['playername'] == player]
-                player_data.to_csv(f'output/2.2_{player}_data_in_long_format_by_athlete_and_metric.csv')
+                player_data.to_csv(f'output/{report_prefix}_{player}_data_in_long_format_by_athlete_and_metric.csv')
                 # only create pivoted wide format if requested
                 if format_type.upper() == "WIDE":
                     player_pivot = player_data.pivot_table(index=['playername', 'timestamp'], columns='metric', values='value').reset_index()
-                    player_pivot.to_csv(f'output/2.2_{player}_data_in_wide_format_by_athlete_and_metric_pivoted.csv')
+                    player_pivot.to_csv(f'output/{report_prefix}_{player}_data_in_wide_format_by_athlete_and_metric_pivoted.csv')
                 print(f"Sample raw data for athlete {player}")
                 for index, row in player_data.iterrows():
                     if index < 10 and row['playername'] == player:

@@ -1,0 +1,67 @@
+team,metric,mean_value,measurement_count,min_value,max_value,std_dev
+Baseball,leftMaxForce,415.94,259,126.75,627.75,99.27
+Baseball,leftTorque,184.79,258,57.61,296.61,45.18
+Baseball,rightMaxForce,400.05,259,82.25,646.0,90.98
+Baseball,rightTorque,177.69,258,37.38,286.81,40.88
+Football,accel_load_accum,414.24,9084,0.0,1146.42,194.1
+Football,distance_total,2926.21,8922,0.0,8870.8,1692.74
+Football,leftMaxForce,490.77,1001,5.5,855.5,100.92
+Football,leftTorque,221.47,996,2.4,396.52,51.25
+Football,rightMaxForce,466.38,1000,22.5,820.0,94.36
+Football,rightTorque,210.26,995,86.63,372.69,47.35
+Mens Basketball,accel_load_accum,534.23,9224,0.0,2391.68,259.66
+Mens Basketball,distance_total,3913.87,9157,0.02,17634.92,1996.96
+Mens Basketball,leftMaxForce,414.04,114,0.75,615.25,88.02
+Mens Basketball,leftTorque,199.34,113,0.25,299.2,42.94
+Mens Basketball,rightMaxForce,381.11,114,7.0,627.25,86.78
+Mens Basketball,rightTorque,183.38,113,2.36,313.31,41.72
+Mens Lax,leftMaxForce,421.54,292,54.25,659.25,86.06
+Mens Lax,leftTorque,186.58,288,20.26,306.57,40.66
+Mens Lax,rightMaxForce,404.12,292,33.5,689.75,83.64
+Mens Lax,rightTorque,178.41,288,12.51,319.7,39.04
+Mens Soccer,accel_load_accum,773.59,5879,0.0,2776.03,358.22
+Mens Soccer,distance_total,6934.28,5846,0.02,21047.06,3418.29
+Mens Soccer,leftMaxForce,396.6,380,141.75,624.0,80.42
+Mens Soccer,leftTorque,170.5,377,61.94,289.22,38.47
+Mens Soccer,rightMaxForce,395.76,380,180.25,610.25,78.08
+Mens Soccer,rightTorque,170.32,377,77.91,282.85,38.32
+Softball,leftMaxForce,338.24,140,139.5,499.5,63.54
+Softball,leftTorque,150.85,140,64.66,224.68,29.77
+Softball,rightMaxForce,328.43,140,132.0,483.75,66.22
+Softball,rightTorque,146.33,140,61.18,212.05,30.32
+Staff,leftMaxForce,372.25,2,361.25,383.25,11.0
+Staff,leftTorque,145.74,2,141.43,150.04,4.31
+Staff,rightMaxForce,341.88,2,333.5,350.25,8.38
+Staff,rightTorque,133.84,2,130.57,137.12,3.28
+Swim/Dive,leftMaxForce,226.76,20,146.5,312.75,54.28
+Swim/Dive,leftTorque,92.38,20,63.27,142.14,22.4
+Swim/Dive,rightMaxForce,222.85,20,139.75,310.75,49.18
+Swim/Dive,rightTorque,91.02,20,58.49,141.24,21.2
+Tennis,leftMaxForce,276.16,72,185.75,443.0,59.11
+Tennis,leftTorque,118.69,72,80.46,193.37,26.05
+Tennis,rightMaxForce,276.39,72,183.5,365.0,44.14
+Tennis,rightTorque,118.61,72,81.73,161.99,18.69
+Track,leftMaxForce,342.09,201,0.25,664.25,88.69
+Track,leftTorque,143.16,201,0.1,301.9,44.72
+Track,rightMaxForce,331.03,198,0.75,529.75,80.33
+Track,rightTorque,138.31,198,0.3,232.11,40.33
+Volleyball,leftMaxForce,324.37,95,201.25,571.75,66.16
+Volleyball,leftTorque,134.1,95,84.22,223.84,27.37
+Volleyball,rightMaxForce,318.85,95,191.25,560.0,67.3
+Volleyball,rightTorque,131.67,95,80.04,219.24,26.99
+Womens Basketball,accel_load_accum,545.09,8395,0.0,1467.83,248.45
+Womens Basketball,distance_total,3876.2,8313,0.01,9948.54,1796.38
+Womens Basketball,leftMaxForce,346.57,57,208.75,467.0,58.44
+Womens Basketball,leftTorque,154.39,57,91.12,221.22,28.19
+Womens Basketball,rightMaxForce,303.57,57,192.0,431.5,54.15
+Womens Basketball,rightTorque,135.23,57,80.35,211.65,26.42
+Womens Lacrosse,leftMaxForce,297.68,555,57.0,638.0,69.15
+Womens Lacrosse,leftTorque,127.42,528,24.88,304.97,33.31
+Womens Lacrosse,rightMaxForce,286.46,555,4.75,625.25,68.0
+Womens Lacrosse,rightTorque,123.11,528,2.07,317.94,32.8
+Womens Soccer,accel_load_accum,541.12,8121,0.0,1869.47,289.39
+Womens Soccer,distance_total,5090.5,8079,0.0,17422.96,2917.43
+Womens Soccer,leftMaxForce,304.06,329,143.75,470.75,54.33
+Womens Soccer,leftTorque,124.23,328,60.16,213.1,25.59
+Womens Soccer,rightMaxForce,291.8,330,2.5,424.25,55.57
+Womens Soccer,rightTorque,119.28,329,1.0,191.24,26.29
