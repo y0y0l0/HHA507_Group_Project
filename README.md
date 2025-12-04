@@ -60,7 +60,7 @@ Individual team members set up their local database connections using the provid
 - `1.2` Data Understanding Recap (Group)
     1. Answers to the following questions:
         1. How many unique athletes are in the database?
-            *Identify the total number of unique athletes across all datasets.*
+            * Identify the total number of unique athletes across all datasets.*
             'There are 1287 unique athletes in the database.'
         2. How many different sports/teams are represented?
             * Determine the number of sports teams included in the data (this data is sanitized).*
