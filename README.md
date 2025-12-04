@@ -27,9 +27,11 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
 Additional modeling notebook for section 3.3: https://colab.research.google.com/drive/1jJDtOS29TCApR4HsrWrxdsDtnwxfeMhS?usp=sharing
 ### Player 755
 Part 1: https://colab.research.google.com/drive/1hVXnwQCo98i74oTtsnyllh1HDIaoZXDD?usp=drive_link
+
 Part 2: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
 ### Player 1128
 Part 1: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
+
 Part 2: https://colab.research.google.com/drive/12RbkLah6NVb0m_d2NEfvQ1URxCP6Oq7O?usp=drive_link 
 
 ## Project Structure
