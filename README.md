@@ -117,10 +117,11 @@ Individual team members set up their local database connections using the provid
                 |7        | distance_total_avg_per_minute              |40315           |
                 |8        | speed_max                                  |40312           |
                 |9        | speed_avg                                  |40298           |
-                 ```
+            ```
     4. Lists the top 10 most common metrics for Vald data (filter by data_source = 'Vald')
             * Identify the most frequently recorded metrics in the Vald dataset (this data includes invalid entries).*
                 -The top 10 most common metrics for Vald data are:
+       ```
                 _________________________________________________________________________
                 |         | metric                                     |  metric_count  |
                 |---------|--------------------------------------------|----------------|
@@ -134,11 +135,11 @@ Individual team members set up their local database connections using the provid
                 |7        | rightTorque                                |3472            |
                 |8        | rightRepetitions                           |3460            |
                 |9        | leftRepetitions                            |3452            |
-            
-    5. Identifies how many unique metrics exist across all data sources
+        ```    
+    6. Identifies how many unique metrics exist across all data sources
             * Identify the total number of distinct metrics recorded across all datasets.*
             -There are 548 unique metrics across all data sources.
-    6. For each data source, show the date range and record count for the top metrics
+    7. For each data source, show the date range and record count for the top metrics
             * Identify the date range and number of records for the most common metrics in each dataset.*
             - Hawkins Top Metrics Date Range and Record Count:
             -Date min_timestamp 2018-10-15 19:27:41 and max_timestamp 2025-10-14 12:50:32 for top metrics by data source Hawkins.
