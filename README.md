@@ -154,8 +154,10 @@ Individual team members set up their local database connections using the provid
                 |5        |      Peak Velocity(m/s)            |          31295 |2018-10-15 19:27:41|2025-10-14 12:50:32|
                 |6        | Avg. Relative Propulsive Force(%)  |          31295 |2018-10-15 19:27:41|2025-10-14 12:50:32|
                 |7        | Avg. Propulsive Force(N)           |          31295 |2018-10-15 19:27:41|2025-10-14 12:50:32|
+            ```
                     - Kinexon Top Metrics Date Range and Record Count:
                     -Date min_timestamp 2021-06-17 21:49:39 and max_timestamp 2025-10-21 12:24:21 for top metrics by data source Kinexon.
+            ```
                 ______________________________________________________________________________________________________
                 |         | metric                          |  record_count  |   min_timestamp   |   max_timestamp   |
                 |---------|---------------------------------|----------------|-------------------|-------------------|
@@ -169,8 +171,10 @@ Individual team members set up their local database connections using the provid
                 |7         | distance_total_avg_per_minute  |          40315 |2021-06-17 21:49:39|2025-10-21 12:24:21|
                 |8         | speed_max                      |          40312 |2021-06-17 21:49:39|2025-10-21 12:24:21|
                 |9         | speed_avg                      |          40298 |2021-06-17 21:49:39|2025-10-21 12:24:21|
+            ```
                 Vald Top Metrics Date Range and Record Count:
                 Date min_timestamp 2020-12-14 12:56:23 and max_timestamp 2025-10-01 15:11:46 for top metrics by data source Vald.
+            ```
                 ______________________________________________________________________________________________________
                 |         | metric                          |  record_count  |   min_timestamp   |   max_timestamp   |
                 |---------|---------------------------------|----------------|-------------------|-------------------|
