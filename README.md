@@ -23,7 +23,7 @@ link to team literature review: https://docs.google.com/document/d/1hs3RljvobFhr
 # Team Notebooks:
 ### Part 3. Visualizations and Analysis
 link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
-### 3.3
+### Additional models for 3.3
 Additional modeling notebook for section 3.3: https://colab.research.google.com/drive/1jJDtOS29TCApR4HsrWrxdsDtnwxfeMhS?usp=sharing
 ### Player 755
 Part 1: https://colab.research.google.com/drive/1hVXnwQCo98i74oTtsnyllh1HDIaoZXDD?usp=drive_link
