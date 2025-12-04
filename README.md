@@ -303,4 +303,4 @@ Report saved in `part4_research_synthesis.pdf` in the `reports` folder
 - Data challenges you encountered
 - What additional research is needed
 -`Q&A (1-2 min)`
-Presentation slides saved in `AHI 507_ Sports Data.pptx` in the `reports` folder
+Presentation slides are found in saved at:  https://docs.google.com/presentation/d/1IiI5CwbIHg4V8L8NR5JBr0AiKxmIxBGMQci9IVsK6oo/edit?usp=sharing and a copy of the slides are stored as `AHI 507_ Sports Data.pptx` in the `reports` folder
