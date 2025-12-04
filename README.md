@@ -3,13 +3,13 @@
 Group SBU Sports data Project
 Goal of this project is to analyze sports performance data from multiple sources (Kinexon and Vald), whether bilateral asymmetry metric differences affect performance metrics (accumulated acceleration load and total distance) that can help improve athlete performance and reduce injury risk.
 # Team Roles:
-- Nina & Yatza: Data Engineer - Responsible for data extraction, transformation.
-- Nina, Katiana, & Yatza: Data Analyst - Focuses on data exploration, visualization, and statistical analysis.
-- Blanca, Katiana, Esquilaure, & Luke: Researcher - Conducts literature review and synthesizes research findings related to sports performance metrics.
-- Nina, & Yatza: Visualization Specialist - Designs and implements visualizations to effectively communicate data insights.
-- Blanca, Nina & Yatza: Project Manager - Oversees project timelines, coordinates team efforts, and ensures deliverables are met.
-- Blanca, Nina, Katiana, Esquilaure, & Luke: Presenter - Prepares and delivers the final presentation of the project findings.
-- Blanca, Yatza: Documentation Specialist - Responsible for maintaining project documentation, including the README file and code comments.
+- `Nina & Yatza`: Data Engineer - Responsible for data extraction, transformation.
+- `Nina, Katiana, Blanca & Yatza`: Data Analyst - Focuses on data exploration, visualization, and statistical analysis.
+- `Blanca, Katiana, Esquilaure, & Luke`: Researcher - Conducts literature review and synthesizes research findings related to sports performance metrics.
+- `Nina, & Yatza`: Visualization Specialist - Designs and implements visualizations to effectively communicate data insights.
+- `Blanca, Nina & Yatza`: Project Manager - Oversees project timelines, coordinates team efforts, and ensures deliverables are met.
+- `Blanca, Nina, Katiana, Esquilaure, Yatza & Luke`: Presenter - Prepares and delivers the final presentation of the project findings.
+- `Blanca, Nina, Yatza`: Documentation Specialist - Responsible for maintaining project documentation, including the README file and code comments.
 
 # Team Data Setup:
 link to team database setup screenshots: https://drive.google.com/drive/folders/1bX1Yk2YJH1KX1Z3o1F6gD3fQXK5Jt5vP?usp=sharing
