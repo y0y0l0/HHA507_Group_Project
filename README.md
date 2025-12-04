@@ -47,9 +47,19 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
     ├── requirements.txt                 # Project dependencies
     ├── GROUP_ASSIGNMENT.pdf             # Group assignment details    
     └── .gitignore                       # Git ignore file
-### Data Exploration
+# 1 Database Connection & Data Exploration
+- Establish database connection
+- Understand data structure and quality
+- Generate summary statistics
+### Data Setup (Individual)
+Individual team members set up their local database connections using the provided scripts and screenshots are found in the `1.1 Team Database Setup Screenshots/` directory.
+
+# The `common_functions.py` script in the `scripts/` directory contains functions to establish
+
 # The `part_exploration.py` script in the `scripts/` directory contains functions for initial data exploration, including loading datasets, summarizing data, and visualizing key metrics.
-    1.2 Data Quality Assessment (Group)
+### 1.2 Data Quality Assessment
+- `1.2` Data Understanding Recap (Group)
+    1. Answers to the following questions:
         1. How many unique athletes are in the database?
             *Identify the total number of unique athletes across all datasets.*
             'There are 1287 unique athletes in the database.'
@@ -71,7 +81,8 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
         6. How many athletes have data from multiple sources (2 or 3 systems) (this data is sanitized)?
             * Determine the number of athletes with data from more than one source (this data includes invalid entries).*
             -There are 541 athletes with data from multiple sources.
-    1.3 Metric Discovery & Selection (Group)
+- `1.3` Metric Discovery & Selection (Group)
+    1. Identify and list the top 10 most common metrics for each data source (Hawkins, Kinexon, Vald)
         1. Lists the top 10 most common metrics for Hawkins data (filter by data_source = 'Hawkins')
             * Identify the most frequently recorded metrics in the Hawkins dataset (this data includes invalid entries).*
             The top 10 most common metrics for Hawkins data are:
@@ -168,10 +179,20 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
                 |7        |rightTorque                      |           3472 |2020-12-14 12:56:23|2025-10-01 15:11:46|
                 |8        |rightRepetitions                 |           3460 |2020-12-14 12:56:23|2025-10-01 15:11:46|
                 |9        |leftRepetitions                  |           3452 |2020-12-14 12:56:23|2025-10-01 15:11:46|
-
-### Data Cleaning and Preprocessing
+    - `1.4` Brief Review Of Literature & Metric Selection (Group)
+     - Based on your metric discovery, conduct a very brief literature review (does not need to follow and
+abide by PRISMA framework due to limited time allowed):
+     - Identify 3-5 key papers that discuss the relevance of your selected metrics to athlete performance and injury risk.
+        - We selected the following metrics based on their prevalence in the datasets and their relevance to athlete performance and injury risk as discussed in the literature:
+            - Bilateral Asymmetry Metrics (e.g., leftMaxForce, rightMaxForce, leftTorque, rightTorque)
+            - Performance Metrics (e.g., accel_load_accum, distance_total)
+     - Summarize the main findings of these papers in relation to your research question.
+     - Justify your selection of metrics based on the literature review.
+     - Document your findings in a shared document for team reference. 
+     Our literature review document is found here:  https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.es53pvsqyhzj#heading=h.owyzndpwo8a8 and a final report is found in the `reports/` folder as `part4_research_synthesis.pdf`.
+### 2. Data Cleaning and Preprocessing
 The `part2_cleaning.py` script in the `scripts/` directory contains functions to clean and preprocess the data. It identifies metrics with missing records, calculates athlete measurement percentages, and flags athletes not tested in the last 6 months.
-# 2.2 Missing Data Analysis (Group)
+- `2.2` Missing Data Analysis (Group)
 - 1. Identify which of your selected metrics have the most NULL or zero values
 - 2. For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics
 - 3. Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
@@ -185,11 +206,101 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
             - only include records where the team is not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
             - Concolidate team names by removing any single quotes
             -Saves the resulting DataFrame to a CSV file with the naming convention: `2.2_[first playername in list]_data_in_wide_format_by_athlete_and_metric.csv`
-# 2.3 Create a Derived Metric (Group)
+- `2.3` Create a Derived Metric (Group)
 - 1. Calculates the mean value for each team (using the team column)
+    - Saves the resulting DataFrame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
 - 2. For each athlete measurement, calculates their percent difference from their team's average
+    - Saves the resulting DataFrame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
 - 3. Identifies the top 5 and bottom 5 performers relative to their team mean
+    - Saves the resulting DataFrame to a CSV file named `2.3-3_top_and_bottom_performers.csv`
 - 4. Optional: Create z-scores or percentile rankings
     - Z-score tutorial: SciPy stats.zscore
     - Percentile tutorial: NumPy percentile
     - Example: Calculating z-scores in pandas
+# 3 Longitudinal Analysis & Visualization (Group)
+- `3.1` Individual Athlete Timeline
+  - Select 2 athletes from a team of your choice and use your selected metrics:
+  - Create line plots showing their metric values over time (recommended: last 6-12 months)
+  - Identify their best and worst performance dates
+  - Calculate if they show improvement or decline trend (simple linear regression acceptable)
+  - Relate your findings to your literature review - are the trends expected? Surprising?
+  Results of Jupyter notebook by player 755 and 1128 in the team SBU Sports data Project are found below:
+  ### Player 755
+    - Part 1:https://colab.research.google.com/drive/1hVXnwQCo98i74oTtsnyllh1HDIaoZXDD?usp=drive_link
+    - Part 2: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
+  ### Player 1128
+    - Part 1: https://colab.research.google.com/drive/1gMds29rwsUNJNJfpWdRJaMjEoiTARa6T?usp=drive_link
+    - Part 2: https://colab.research.google.com/drive/12RbkLah6NVb0m_d2NEfvQ1URxCP6Oq7O?usp=drive_link 
+
+- `3.2` Team Comparison Analysis (Pair Work)
+  - Compare two different teams/sports using the team column and your selected metrics:
+  - Create box plots or violin plots comparing your selected metric(s) between teams
+  - Calculate statistical significance (t-test or ANOVA as appropriate)
+  - Create a visualization showing testing frequency by team over time
+  - Interpret results in context of your literature review:
+    Do differences make sense given sport demands?
+    How do values compare to published norms (if available)?
+    What might explain the differences or similarities?
+    Results of Jupyter notebook part3_viz_comparison in the team SBU Sports data Project are found below:
+    link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
+
+- `3.3` Dashboard Metric (Full Group)
+   - Create a summary visualization that shows:
+   - Total number of tests per month (all systems combined)
+   - Breakdown by data source (stacked bar chart recommended)
+   - Identify any gaps or unusual patterns in data collection
+    link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
+    with additional analysis in: https://colab.research.google.com/drive/1jJDtOS29TCApR4HsrWrxdsDtnwxfeMhS?usp=sharing
+# 4 Research Synthesis & Application
+- `4.1` Performance Monitoring Flag System (Group)
+    - Design a flagging system based on your selected metrics and literature review:
+    - Based on your literature review, define thresold of asymmetricality of >10%- 15% in bilateral metrics as a risk factor for injury
+    - Identify athletes who meet any of the following criteria:
+    - Identify Athlete hasn't been tested in >30 days Left/right asymmetry if using bilateral metrics
+- Deviation from team norms
+- Justify your thresholds using evidence from your literature review
+- Create a script that identifies athletes meeting your flag criteria
+- Output a CSV with: playername, team, flag reason, metric value, last test date `part4_flagged_athletes.csv`
+- `4.2` Research Synthesis & Recommendations (Group)
+ Synthesize your findings into a research report (3-4 pages) that includes:
+ - `Introduction:` Your research question and why it matters (based on literature gaps)
+- `Methods`:
+    - Description of your selected metrics
+    - Data filtering and cleaning approach
+    - Statistical methods used
+- `Results:`
+    - Key findings from your analyses
+    - Tables and figures with appropriate captions
+    - Statistical test results
+- `Discussion:`
+    - How do your findings relate to existing literature?
+    - What gaps did your analysis address?
+    - What are the practical implications for coaches/trainers?
+    - What surprised you? What confirmed existing knowledge?
+- `Limitations & Future Directions:`
+    - Data limitations (missing values, sample size, etc.)
+    - What additional data would be helpful?
+    - Recommendations for future research
+- `References:` Full citations for your literature review
+Report saved in `part4_research_synthesis.pdf` in the `reports` folder
+- `4.3` Final Presentation (Group)
+-`Introduction (2 min):`
+- Your research question/hypothesis
+- Why it matters (the gap you're addressing)
+- Your selected metrics and why
+-`Methods (2 min):`
+- Data overview and quality assessment
+- Analysis approach
+-`Key Findings (4 min):`
+- Main results with visualizations
+- Statistical findings
+- Comparison to literature
+-`Practical Applications (2 min):`
+- Your performance monitoring flag system
+- Recommendations for coaches/trainers
+- How your findings fill the identified gap
+-`Limitations & Future Work (1 min):`
+- Data challenges you encountered
+- What additional research is needed
+-`Q&A (1-2 min)`
+Presentation slides saved in `AHI 507_ Sports Data.pptx` in the `reports` folder
