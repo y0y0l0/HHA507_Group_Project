@@ -307,3 +307,59 @@ def get_all_clean_metrics_records(report_type:str) -> pd.DataFrame:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
+
+def get_top_five_players_per_team(input_teams_df) -> pd.DataFrame:
+    """Get all records from the database with clean metrics.
+    Returns:
+        int: The number of records retrieved.
+        csv: A CSV file containing all records.
+    """
+    ## Identifies the top five player relative to their teams mean per metric
+    sql_test_query = "SELECT  metric,data_source, value,REPLACE(team,'\\'','') as team, playername, " \
+                        "ROUND(AVG(value), 2) AS player_mean_value " \
+                        "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
+                        "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
+                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
+                        "GROUP BY metric, data_source, REPLACE(team,'\\'',''), playername;"
+    response = run_sport_data_query(sql_test_query)
+    merged_team_player_df = pd.merge(response, input_teams_df, on=['team', 'metric'], how='inner')
+    merged_team_player_df['percent_difference_from_team_mean'] = ((merged_team_player_df['player_mean_value'] - merged_team_player_df['mean_value']) / merged_team_player_df['mean_value']) * 100
+    merged_team_player_df.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, False], inplace=True)
+    merged_team_player_df = merged_team_player_df.groupby(['team', 'metric']).head(5).reset_index(drop=True)
+    
+    if not merged_team_player_df.empty:
+        output_file = 'output/2.3-3_top_five_players_per_team.csv'
+        try:
+            merged_team_player_df.to_csv(output_file)
+            print(f"Successfully saved to {output_file}")
+        except PermissionError as e:
+            print(f"Permission error writing to {output_file}: {e}")
+    return merged_team_player_df
+
+def get_bottom_five_players_per_team(input_teams_df) -> pd.DataFrame:
+    """Get all records from the database with clean metrics.
+    Returns:
+        int: The number of records retrieved.
+        csv: A CSV file containing all records.
+    """
+    ## Identifies the bottom five player relative to their teams mean per metric
+    sql_test_query = "SELECT  metric,data_source, value,REPLACE(team,'\\'','') as team, playername, " \
+                        "ROUND(AVG(value), 2) AS player_mean_value " \
+                        "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
+                        "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
+                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
+                        "GROUP BY metric, data_source, REPLACE(team,'\\'',''), playername;"
+    response = run_sport_data_query(sql_test_query)
+    merged_team_player_df = pd.merge(response, input_teams_df, on=['team', 'metric'], how='inner')
+    merged_team_player_df['percent_difference_from_team_mean'] = ((merged_team_player_df['player_mean_value'] - merged_team_player_df['mean_value']) / merged_team_player_df['mean_value']) * 100
+    merged_team_player_df.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, True], inplace=True)
+    merged_team_player_df = merged_team_player_df.groupby(['team', 'metric']).head(5).reset_index(drop=True)
+    
+    if not merged_team_player_df.empty:
+        output_file = 'output/2.3-3_bottom_five_players_per_team.csv'
+        try:
+            merged_team_player_df.to_csv(output_file)
+            print(f"Successfully saved to {output_file}")
+        except PermissionError as e:
+            print(f"Permission error writing to {output_file}: {e}")
+    return merged_team_player_df
