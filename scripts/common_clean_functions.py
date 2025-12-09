@@ -412,3 +412,6 @@ def get_bottom_five_players_per_team() -> pd.DataFrame:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return bottom_five_df
+
+
+# 2.3-2: For each athlete measurement, calculate their percent difference from their team's average

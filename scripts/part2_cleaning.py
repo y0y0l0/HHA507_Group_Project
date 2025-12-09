@@ -61,9 +61,13 @@ get_data_in_wide_format_by_athlete_and_metric("2.2", metric_list, "all","wide")
 ## Calculates the mean value for each team (using the team column)
 team_mean_by_players = get_mean_value_for_each_team()
 
-''' 2.3-3 - For each athlete measurement, calculates their percent difference from their team's average'''
-get_top_five_players_per_team()
-get_bottom_five_players_per_team()
+''' 2.3-2 - For each athlete measurement, calculates their percent difference from their team's average'''
+calculate_percent_difference_from_team_mean()
+
+''' 2.3-3 - Identifies the top 5 and bottom 5 performers relative to their team mean'''
+get_top_five_players_per_team(team_mean_by_players)
+get_bottom_five_players_per_team(team_mean_by_players)
+
 
 ''' 2.3-4 - Optional zscore calculation implemented: Create z-scores or percentile rankings for each athlete within their team'''
 ''' 
