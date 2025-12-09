@@ -70,8 +70,9 @@ get_bottom_five_players_per_team()
 -Z-score tutorial: SciPy stats.zscore is evaluated in section 3.2.1 for all key metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total,avg_torque_asymmetry,avg_max_force_asymmetry)'''
 ''' 3.2-1 - Export Cleaned Data'''
 ## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')
-#get_all_clean_metrics_records("wide")
-#moved method call to part4-flags.py to avoid duplicate output
+''' get_all_clean_metrics_records("wide")
+moved method call to part4-flags.py to avoid duplicate output
+'''
 ''' 3.1-2 Match Force/Torque Metrics with Accel_Load_Accum and Distance_Total by Date'''
 ## Call the function to match metrics by if the date is the same only
 
