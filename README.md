@@ -231,10 +231,8 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 - 3. Identifies the top 5 and bottom 5 performers relative to their team mean
     - Saves the top 5 players per team resulting DataFrame to a CSV file named `2.3-3_top_five_players_per_team.csv`
     - Saves the bottom 5 players per team resulting DataFrame to a CSV file named `2.3-3_bottom_five_players_per_team.csv`
-- 4. Optional: Create z-scores or percentile rankings
-    - Z-score tutorial: SciPy stats.zscore
-    - Percentile tutorial: NumPy percentile
-    - Example: Calculating z-scores in pandas
+- 4. Optional: Create z-scores as part of 3.2.1 as exported cleaned data
+    - Z-scores or percentile rankings for each athlete within their team
 # 3 Longitudinal Analysis & Visualization (Group)
 - `3.1` Individual Athlete Timeline
   - Select 2 athletes from a team of your choice and use your selected metrics:
