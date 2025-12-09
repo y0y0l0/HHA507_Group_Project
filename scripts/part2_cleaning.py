@@ -68,7 +68,6 @@ calculate_percent_difference_from_team_mean()
 get_top_five_players_per_team(team_mean_by_players)
 get_bottom_five_players_per_team(team_mean_by_players)
 
-
 ''' 2.3-4 - Optional zscore calculation implemented: Create z-scores or percentile rankings for each athlete within their team'''
 ''' 
 -Z-score tutorial: SciPy stats.zscore is evaluated in section 3.2.1 for all key metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total,avg_torque_asymmetry,avg_max_force_asymmetry)'''

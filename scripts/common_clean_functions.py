@@ -413,5 +413,48 @@ def get_bottom_five_players_per_team() -> pd.DataFrame:
             print(f"Permission error writing to {output_file}: {e}")
     return bottom_five_df
 
-
 # 2.3-2: For each athlete measurement, calculate their percent difference from their team's average
+def calculate_percent_difference_from_team_mean() -> pd.DataFrame:
+    """Calculate percent difference from team mean for each athlete measurement.
+    Returns:
+        pd.DataFrame: DataFrame with athlete measurements and their percent difference from team mean.
+        csv: A CSV file containing all measurements with percent differences.
+    """
+    ## Get all individual athlete measurements
+    sql_test_query = "SELECT metric, data_source, " \
+                     "REPLACE(team,'\\'','') as team, " \
+                     "playername, " \
+                     "timestamp, " \
+                     "value " \
+                     "FROM research_experiment_refactor_test " \
+                     "WHERE value IS NOT NULL AND value > 0.0 " \
+                     "AND TRIM(metric) IN ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
+                     "AND TRIM(REPLACE(team,'\\'','')) NOT IN ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
+    
+    response = run_sport_data_query(sql_test_query)
+    
+    if response.empty:
+        print("No data returned from query")
+        return pd.DataFrame()
+    
+    # Load the team means CSV
+    team_means_df = pd.read_csv('output/2.3-1&2_mean_value_for_each_team.csv')
+    
+    # Merge athlete measurements with team means
+    merged_df = pd.merge(response, team_means_df[['team', 'metric', 'mean_value']], on=['team', 'metric'], how='inner')
+    
+    # Calculate percent difference from team mean
+    merged_df['percent_difference_from_team_mean'] = ((merged_df['value'] - merged_df['mean_value']) / merged_df['mean_value']) * 100
+    
+    if not merged_df.empty:
+        output_file = 'output/2.3-2_athlete_measurements_with_percent_difference.csv'
+        try:
+            merged_df.to_csv(output_file, index=False)
+            print(f"Successfully saved to {output_file}")
+            print(f"\nTotal measurements with percent difference calculated: {len(merged_df)}")
+            print(f"\nSample results:")
+            print(merged_df[['playername', 'team', 'metric', 'value', 'mean_value', 'percent_difference_from_team_mean']].head(10))
+        except PermissionError as e:
+            print(f"Permission error writing to {output_file}: {e}")
+    
+    return merged_df
