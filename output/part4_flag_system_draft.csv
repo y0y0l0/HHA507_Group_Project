@@ -1,0 +1,167 @@
+playername,team,flag_reason,metric_value,last_test_date,test_date
+PLAYER_014,Football,Not Tested in > 30 days,,,2025-06-02
+PLAYER_021,Football,High Max Force Asymmetry,10.47244094488189,2024-03-08,
+PLAYER_021,Football,High Torque Asymmetry,10.472440944881887,2024-03-08,
+PLAYER_021,Football,High Max Force Asymmetry,10.944267975743577,2024-07-03,
+PLAYER_021,Football,High Torque Asymmetry,10.944267975743577,2024-07-03,
+PLAYER_021,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_033,Mens Soccer,Not Tested in > 30 days,,,2024-10-30
+PLAYER_042,Womens Basketball,High Max Force Asymmetry,14.64968152866242,2025-09-02,
+PLAYER_042,Womens Basketball,High Torque Asymmetry,14.649681528662416,2025-09-02,
+PLAYER_052,Womens Soccer,Not Tested in > 30 days,,,2023-07-26
+PLAYER_066,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_084,Womens Soccer,High Max Force Asymmetry,12.257531985142386,2023-07-17,
+PLAYER_084,Womens Soccer,High Torque Asymmetry,12.257531985142384,2023-07-17,
+PLAYER_093,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_1022,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_1036,Mens Basketball,High Max Force Asymmetry,10.23119851182567,2025-06-23,
+PLAYER_1036,Mens Basketball,High Torque Asymmetry,10.231198511825674,2025-06-23,
+PLAYER_1036,Mens Basketball,Not Tested in > 30 days,,,2025-06-23
+PLAYER_1047,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_1050,Mens Basketball,Not Tested in > 30 days,,,2025-06-23
+PLAYER_1055,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_1077,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_1079,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_1104,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_1114,Mens Soccer,High Max Force Asymmetry,12.046257629296498,2023-08-08,
+PLAYER_1114,Mens Soccer,High Torque Asymmetry,12.0462576292965,2023-08-08,
+PLAYER_1114,Mens Soccer,Not Tested in > 30 days,,,2024-10-30
+PLAYER_1126,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_1128,Womens Basketball,High Max Force Asymmetry,11.03896103896104,2022-08-24,
+PLAYER_1128,Womens Basketball,High Torque Asymmetry,11.038961038961034,2022-08-24,
+PLAYER_1128,Womens Basketball,High Max Force Asymmetry,11.497105045492145,2022-09-19,
+PLAYER_1128,Womens Basketball,High Torque Asymmetry,11.497105045492145,2022-09-19,
+PLAYER_1128,Womens Basketball,High Max Force Asymmetry,14.702581369248035,2022-12-13,
+PLAYER_1128,Womens Basketball,High Torque Asymmetry,14.702581369248032,2022-12-13,
+PLAYER_1128,Womens Basketball,High Max Force Asymmetry,11.659034871433605,2024-02-14,
+PLAYER_1128,Womens Basketball,High Torque Asymmetry,11.6590348714336,2024-02-14,
+PLAYER_1128,Womens Basketball,Not Tested in > 30 days,,,2024-10-21
+PLAYER_1129,Football,Not Tested in > 30 days,,,2023-08-20
+PLAYER_1186,Mens Basketball,Not Tested in > 30 days,,,2025-06-23
+PLAYER_1191,Mens Soccer,Not Tested in > 30 days,,,2022-08-10
+PLAYER_1196,Mens Soccer,High Max Force Asymmetry,-12.99864314789688,2023-08-21,
+PLAYER_1196,Mens Soccer,High Torque Asymmetry,-12.99864314789688,2023-08-21,
+PLAYER_1196,Mens Soccer,High Max Force Asymmetry,-15.676728334956184,2024-10-30,
+PLAYER_1196,Mens Soccer,High Torque Asymmetry,-15.676728334956184,2024-10-30,
+PLAYER_1196,Mens Soccer,Not Tested in > 30 days,,,2024-10-30
+PLAYER_1232,Football,Not Tested in > 30 days,,,2025-01-22
+PLAYER_137,Mens Soccer,Not Tested in > 30 days,,,2024-10-30
+PLAYER_154,Football,High Max Force Asymmetry,25.186500888099467,2023-07-13,
+PLAYER_154,Football,High Torque Asymmetry,25.186500888099467,2023-07-13,
+PLAYER_154,Football,High Max Force Asymmetry,14.250814332247558,2023-07-13,
+PLAYER_154,Football,High Torque Asymmetry,14.250814332247556,2023-07-13,
+PLAYER_154,Football,High Max Force Asymmetry,15.856236786469344,2023-07-13,
+PLAYER_154,Football,High Torque Asymmetry,15.85623678646934,2023-07-13,
+PLAYER_154,Football,High Max Force Asymmetry,10.37344398340249,2023-08-04,
+PLAYER_154,Football,High Torque Asymmetry,10.373443983402488,2023-08-04,
+PLAYER_154,Football,High Max Force Asymmetry,10.686787804126888,2023-08-20,
+PLAYER_154,Football,High Torque Asymmetry,10.686787804126883,2023-08-20,
+PLAYER_154,Football,High Max Force Asymmetry,16.553933784264864,2023-09-02,
+PLAYER_154,Football,High Torque Asymmetry,16.553933784264867,2023-09-02,
+PLAYER_154,Football,Not Tested in > 30 days,,,2023-09-02
+PLAYER_158,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_182,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_190,Womens Basketball,High Max Force Asymmetry,11.582381729200652,2025-09-02,
+PLAYER_190,Womens Basketball,High Torque Asymmetry,11.582381729200652,2025-09-02,
+PLAYER_193,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_218,Womens Soccer,High Max Force Asymmetry,20.687910976226608,2023-07-19,
+PLAYER_218,Womens Soccer,High Torque Asymmetry,20.6879109762266,2023-07-19,
+PLAYER_218,Womens Soccer,High Max Force Asymmetry,11.428571428571429,2023-08-15,
+PLAYER_218,Womens Soccer,High Torque Asymmetry,11.428571428571429,2023-08-15,
+PLAYER_218,Womens Soccer,Not Tested in > 30 days,,,2023-08-15
+PLAYER_230,Football,High Max Force Asymmetry,10.887417218543046,2023-08-20,
+PLAYER_230,Football,High Torque Asymmetry,10.887417218543048,2023-08-20,
+PLAYER_230,Football,Not Tested in > 30 days,,,2025-02-24
+PLAYER_252,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_262,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_270,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_297,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_342,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_363,Womens Basketball,High Max Force Asymmetry,19.417847567981617,2025-09-02,
+PLAYER_363,Womens Basketball,High Torque Asymmetry,19.41784756798162,2025-09-02,
+PLAYER_404,Mens Basketball,High Max Force Asymmetry,-80.64516129032258,2025-06-23,
+PLAYER_404,Mens Basketball,High Torque Asymmetry,-80.64516129032259,2025-06-23,
+PLAYER_404,Mens Basketball,Not Tested in > 30 days,,,2025-06-23
+PLAYER_413,Womens Soccer,High Max Force Asymmetry,11.014948859166012,2025-08-26,
+PLAYER_413,Womens Soccer,High Torque Asymmetry,11.014948859166012,2025-08-26,
+PLAYER_423,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_457,Womens Soccer,High Max Force Asymmetry,-10.621861722672849,2022-08-05,
+PLAYER_457,Womens Soccer,High Torque Asymmetry,-10.621861722672849,2022-08-05,
+PLAYER_457,Womens Soccer,Not Tested in > 30 days,,,2023-07-19
+PLAYER_480,Womens Soccer,High Max Force Asymmetry,11.01749837977965,2024-09-24,
+PLAYER_480,Womens Soccer,High Torque Asymmetry,11.017498379779656,2024-09-24,
+PLAYER_482,Football,Not Tested in > 30 days,,,2024-03-07
+PLAYER_489,Football,High Max Force Asymmetry,-14.151410192973776,2025-07-02,
+PLAYER_489,Football,High Torque Asymmetry,-14.15141019297377,2025-07-02,
+PLAYER_489,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_490,Mens Soccer,High Max Force Asymmetry,-19.107662463627545,2023-08-21,
+PLAYER_490,Mens Soccer,High Torque Asymmetry,-19.107662463627545,2023-08-21,
+PLAYER_490,Mens Soccer,Not Tested in > 30 days,,,2023-08-21
+PLAYER_518,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_539,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_557,Mens Basketball,High Max Force Asymmetry,19.032921810699587,2023-07-25,
+PLAYER_557,Mens Basketball,High Torque Asymmetry,19.03292181069959,2023-07-25,
+PLAYER_557,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_567,Football,High Max Force Asymmetry,18.302243849689106,2023-07-13,
+PLAYER_567,Football,High Torque Asymmetry,18.302243849689106,2023-07-13,
+PLAYER_567,Football,High Max Force Asymmetry,10.418859187539466,2024-06-06,
+PLAYER_567,Football,High Torque Asymmetry,10.41885918753946,2024-06-06,
+PLAYER_567,Football,Not Tested in > 30 days,,,2025-07-18
+PLAYER_579,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_593,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_617,Mens Soccer,High Max Force Asymmetry,15.67732115677321,2023-08-08,
+PLAYER_617,Mens Soccer,High Torque Asymmetry,15.677321156773214,2023-08-08,
+PLAYER_617,Mens Soccer,Not Tested in > 30 days,,,2023-08-21
+PLAYER_685,Womens Soccer,High Max Force Asymmetry,-11.76470588235294,2023-07-19,
+PLAYER_685,Womens Soccer,High Torque Asymmetry,-11.764705882352942,2023-07-19,
+PLAYER_685,Womens Soccer,Not Tested in > 30 days,,,2024-09-24
+PLAYER_719,Womens Soccer,High Max Force Asymmetry,16.940671908506076,2022-10-19,
+PLAYER_719,Womens Soccer,High Torque Asymmetry,16.940671908506076,2022-10-19,
+PLAYER_719,Womens Soccer,High Max Force Asymmetry,12.477175897748022,2023-07-17,
+PLAYER_719,Womens Soccer,High Torque Asymmetry,12.477175897748022,2023-07-17,
+PLAYER_719,Womens Soccer,Not Tested in > 30 days,,,2024-09-24
+PLAYER_732,Mens Soccer,Not Tested in > 30 days,,,2025-08-01
+PLAYER_745,Womens Soccer,High Max Force Asymmetry,-11.278195488721805,2022-08-30,
+PLAYER_745,Womens Soccer,High Torque Asymmetry,-11.2781954887218,2022-08-30,
+PLAYER_745,Womens Soccer,High Max Force Asymmetry,-11.17141564902759,2022-09-02,
+PLAYER_745,Womens Soccer,High Torque Asymmetry,-11.171415649027592,2022-09-02,
+PLAYER_745,Womens Soccer,Not Tested in > 30 days,,,2022-09-24
+PLAYER_755,Mens Basketball,High Max Force Asymmetry,12.154115586690018,2024-06-24,
+PLAYER_755,Mens Basketball,High Torque Asymmetry,12.154115586690017,2024-06-24,
+PLAYER_755,Mens Basketball,High Max Force Asymmetry,12.49544626593807,2025-09-05,
+PLAYER_755,Mens Basketball,High Torque Asymmetry,12.495446265938073,2025-09-05,
+PLAYER_780,Womens Soccer,High Max Force Asymmetry,-11.785972523499638,2023-07-19,
+PLAYER_780,Womens Soccer,High Torque Asymmetry,-11.785972523499638,2023-07-19,
+PLAYER_780,Womens Soccer,Not Tested in > 30 days,,,2024-09-24
+PLAYER_792,Womens Soccer,Not Tested in > 30 days,,,2022-08-30
+PLAYER_796,Womens Soccer,High Max Force Asymmetry,15.599022004889976,2022-09-02,
+PLAYER_796,Womens Soccer,High Torque Asymmetry,15.59902200488998,2022-09-02,
+PLAYER_796,Womens Soccer,High Max Force Asymmetry,13.756177924217464,2023-07-17,
+PLAYER_796,Womens Soccer,High Torque Asymmetry,13.75617792421746,2023-07-17,
+PLAYER_796,Womens Soccer,Not Tested in > 30 days,,,2023-07-19
+PLAYER_803,Womens Soccer,Not Tested in > 30 days,,,2024-09-24
+PLAYER_888,Football,High Max Force Asymmetry,14.838381267498091,2025-02-24,
+PLAYER_888,Football,High Torque Asymmetry,14.838381267498091,2025-02-24,
+PLAYER_888,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_896,Womens Soccer,Not Tested in > 30 days,,,2022-08-30
+PLAYER_897,Womens Soccer,Not Tested in > 30 days,,,2022-04-27
+PLAYER_902,Mens Soccer,High Max Force Asymmetry,-13.030069390902083,2022-08-10,
+PLAYER_902,Mens Soccer,High Torque Asymmetry,-13.030069390902083,2022-08-10,
+PLAYER_902,Mens Soccer,High Max Force Asymmetry,17.862924986508368,2023-08-08,
+PLAYER_902,Mens Soccer,High Torque Asymmetry,17.86292498650836,2023-08-08,
+PLAYER_902,Mens Soccer,High Max Force Asymmetry,-12.22755818248984,2024-10-30,
+PLAYER_902,Mens Soccer,High Torque Asymmetry,-12.22755818248984,2024-10-30,
+PLAYER_902,Mens Soccer,Not Tested in > 30 days,,,2024-10-30
+PLAYER_933,Mens Basketball,High Max Force Asymmetry,14.19607843137255,2024-06-24,
+PLAYER_933,Mens Basketball,High Torque Asymmetry,14.196078431372548,2024-06-24,
+PLAYER_933,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_944,Womens Soccer,High Max Force Asymmetry,11.287988422575976,2024-09-24,
+PLAYER_944,Womens Soccer,High Torque Asymmetry,11.287988422575976,2024-09-24,
+PLAYER_944,Womens Soccer,Not Tested in > 30 days,,,2024-09-24
+PLAYER_953,Football,Not Tested in > 30 days,,,2025-07-02
+PLAYER_964,Mens Soccer,Not Tested in > 30 days,,,2024-08-06
+PLAYER_988,Mens Basketball,Not Tested in > 30 days,,,2024-06-24
+PLAYER_995,Mens Basketball,High Max Force Asymmetry,12.615384615384617,2024-06-24,
+PLAYER_995,Mens Basketball,High Torque Asymmetry,12.615384615384617,2024-06-24,
+PLAYER_995,Mens Basketball,High Max Force Asymmetry,10.1010101010101,2025-09-05,
+PLAYER_995,Mens Basketball,High Torque Asymmetry,10.101010101010106,2025-09-05,
