@@ -301,6 +301,19 @@ def get_all_clean_metrics_records(report_type:str) -> pd.DataFrame:
                 response['avg_max_force_asymmetry'] = ((response['leftMaxForce'] - response['rightMaxForce']) / (response['leftMaxForce'] + response['rightMaxForce']) ) *100
             else:
                 print(f"Warning: 'leftMaxForce' and/or 'rightMaxForce' columns not found. Available columns: {list(response.columns)}")
+            
+            # Calculate z-scores for each metric within each team
+            # Z-score = (value - team_mean) / team_std_dev
+            metric_columns = ['leftTorque', 'rightTorque', 'leftMaxForce', 'rightMaxForce', 'accel_load_accum', 'distance_total','avg_max_force_asymmetry','avg_torque_asymmetry']
+            for metric_col in metric_columns:
+                if metric_col in response.columns:
+                    zscore_col = f'{metric_col}_zscore'
+                    # Group by team and calculate z-score
+                    response[zscore_col] = response.groupby('team')[metric_col].transform(
+                        lambda x: (x - x.mean()) / x.std() if x.std() != 0 else 0
+                    )
+                    print(f"Z-score calculated for {metric_col}")
+                    
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
@@ -308,58 +321,94 @@ def get_all_clean_metrics_records(report_type:str) -> pd.DataFrame:
             print(f"Permission error writing to {output_file}: {e}")
     return response
 
-def get_top_five_players_per_team(input_teams_df) -> pd.DataFrame:
-    """Get all records from the database with clean metrics.
+def get_top_five_players_per_team() -> pd.DataFrame:
+    """Get top 5 players per team relative to their team's mean per metric.
+    Uses window functions to calculate team average and player average.
     Returns:
-        int: The number of records retrieved.
-        csv: A CSV file containing all records.
+        pd.DataFrame: DataFrame with top 5 players per team/metric.
+        csv: A CSV file containing results.
     """
     ## Identifies the top five player relative to their teams mean per metric
-    sql_test_query = "SELECT  metric,data_source, value,REPLACE(team,'\\'','') as team, playername, " \
-                        "ROUND(AVG(value), 2) AS player_mean_value " \
+    ## Using window function to get individual values with team average
+    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, value, " \
+                        "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric), 2) AS team_avg_value, " \
+                        "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric, playername), 2) AS player_mean_value " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
                         "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
-                        "GROUP BY metric, data_source, REPLACE(team,'\\'',''), playername;"
+                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
     response = run_sport_data_query(sql_test_query)
-    merged_team_player_df = pd.merge(response, input_teams_df, on=['team', 'metric'], how='inner')
-    merged_team_player_df['percent_difference_from_team_mean'] = ((merged_team_player_df['player_mean_value'] - merged_team_player_df['mean_value']) / merged_team_player_df['mean_value']) * 100
-    merged_team_player_df.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, False], inplace=True)
-    merged_team_player_df = merged_team_player_df.groupby(['team', 'metric']).head(5).reset_index(drop=True)
     
-    if not merged_team_player_df.empty:
+    # Check if DataFrame is valid
+    if response is None or response.empty:
+        print("Warning: response DataFrame is empty or None")
+        return None
+    
+    # Verify required columns exist
+    if 'team' not in response.columns or 'metric' not in response.columns:
+        print(f"Warning: Missing required columns in response. Columns: {response.columns.tolist()}")
+        return None
+    
+    # Calculate percent difference using team_avg_value from window function
+    response['percent_difference_from_team_mean'] = ((response['player_mean_value'] - response['team_avg_value']) / response['team_avg_value']) * 100
+    
+    # Get unique player averages (remove duplicate rows from window function)
+    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean']]
+    
+    # Sort descending for top performers and get top 5 per team/metric
+    player_summary.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, False], inplace=True)
+    top_five_df = player_summary.groupby(['team', 'metric']).head(5).reset_index(drop=True)
+    
+    if not top_five_df.empty:
         output_file = 'output/2.3-3_top_five_players_per_team.csv'
         try:
-            merged_team_player_df.to_csv(output_file)
+            top_five_df.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
-    return merged_team_player_df
+    return top_five_df
 
-def get_bottom_five_players_per_team(input_teams_df) -> pd.DataFrame:
-    """Get all records from the database with clean metrics.
+def get_bottom_five_players_per_team() -> pd.DataFrame:
+    """Get bottom 5 players per team relative to their team's mean per metric.
+    Uses window functions to calculate team average and player average.
     Returns:
-        int: The number of records retrieved.
-        csv: A CSV file containing all records.
+        pd.DataFrame: DataFrame with bottom 5 players per team/metric.
+        csv: A CSV file containing results.
     """
     ## Identifies the bottom five player relative to their teams mean per metric
-    sql_test_query = "SELECT  metric,data_source, value,REPLACE(team,'\\'','') as team, playername, " \
-                        "ROUND(AVG(value), 2) AS player_mean_value " \
+    ## Using window function to get individual values with team average
+    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, value, " \
+                        "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric), 2) AS team_avg_value, " \
+                        "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric, playername), 2) AS player_mean_value " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
                         "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
-                        "GROUP BY metric, data_source, REPLACE(team,'\\'',''), playername;"
+                        "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
     response = run_sport_data_query(sql_test_query)
-    merged_team_player_df = pd.merge(response, input_teams_df, on=['team', 'metric'], how='inner')
-    merged_team_player_df['percent_difference_from_team_mean'] = ((merged_team_player_df['player_mean_value'] - merged_team_player_df['mean_value']) / merged_team_player_df['mean_value']) * 100
-    merged_team_player_df.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, True], inplace=True)
-    merged_team_player_df = merged_team_player_df.groupby(['team', 'metric']).head(5).reset_index(drop=True)
     
-    if not merged_team_player_df.empty:
+    # Check if DataFrame is valid
+    if response is None or response.empty:
+        print("Warning: response DataFrame is empty or None")
+        return None
+    
+    # Verify required columns exist
+    if 'team' not in response.columns or 'metric' not in response.columns:
+        print(f"Warning: Missing required columns in response. Columns: {response.columns.tolist()}")
+        return None
+    
+    # Calculate percent difference using team_avg_value from window function
+    response['percent_difference_from_team_mean'] = ((response['player_mean_value'] - response['team_avg_value']) / response['team_avg_value']) * 100
+    
+    # Get unique player averages (remove duplicate rows from window function)
+    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean']]
+    
+    # Sort ascending for bottom performers (most negative first) and get bottom 5 per team/metric
+    player_summary.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, True], inplace=True)
+    bottom_five_df = player_summary.groupby(['team', 'metric']).head(5).reset_index(drop=True)
+    
+    if not bottom_five_df.empty:
         output_file = 'output/2.3-3_bottom_five_players_per_team.csv'
         try:
-            merged_team_player_df.to_csv(output_file)
+            bottom_five_df.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
-    return merged_team_player_df
+    return bottom_five_df

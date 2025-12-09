@@ -202,10 +202,18 @@ abide by PRISMA framework due to limited time allowed):
 ### 2. Data Cleaning and Preprocessing
 The `part2_cleaning.py` script in the `scripts/` directory contains functions to clean and preprocess the data. It identifies metrics with missing records, calculates athlete measurement percentages, and flags athletes not tested in the last 6 months.
 - `2.2` Missing Data Analysis (Group)
-- 1. Identify which of your selected metrics have the most NULL or zero values
-- 2. For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics
-- 3. Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
+- 1. Identify which of our selected metrics have the most NULL or zero values
+ - We analyzed the selected metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total) for missing or zero values. The results showed that leftTorque and rightTorque had the highest number of NULL or zero values among the selected metrics.
+- 2. For each sport/team, calculate what percentage of athletes have at least 5 measurements for selceted metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total)
+- We calculated the percentage of athletes with at least 5 measurements for each selected metric across different sports/teams. The results varied significantly, with some teams having over 100% coverage to as low as 5.26%.
+- 3. Identify athletes who haven't been tested in the last 6 months (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total)
+- We identified athletes who had not been tested in the last 6 months (180 days) for the selected metrics. 2 players (Baseball PLAYER 484 and Mens Lax PLAYER 726) were found to be missing tests, particularly for the the selected metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total).
 - 4. Determine if you have sufficient data to answer your research question
+- After conducting the missing data analysis, we found that:
+    - The metrics with the most NULL or zero values are leftTorque and rightTorque.
+    - The percentage of athletes with at least 5 measurements for the selected metrics varies by sport/team, with some teams having over 100% coverage to as low as 5.26%.
+    - Two athletes have not been tested in the last 6 months, particularly for the selected metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total).
+    - Based on this analysis, we determined that we have sufficient data to proceed with our research question, although we will need to account for missing values in our analyses. 
 2.2 Data Transformation Challenge (Group)
 - 1. Takes a player name (e.g., "PLAYER_001") and your selected metrics (e.g., "leftMaxForce", "rightMaxForce") as input
     - Returns a pandas DataFrame with:
@@ -221,7 +229,8 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 - 2. For each athlete measurement, calculates their percent difference from their team's average
     - Saves the resulting DataFrame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
 - 3. Identifies the top 5 and bottom 5 performers relative to their team mean
-    - Saves the resulting DataFrame to a CSV file named `2.3-3_top_and_bottom_performers.csv`
+    - Saves the top 5 players per team resulting DataFrame to a CSV file named `2.3-3_top_five_players_per_team.csv`
+    - Saves the bottom 5 players per team resulting DataFrame to a CSV file named `2.3-3_bottom_five_players_per_team.csv`
 - 4. Optional: Create z-scores or percentile rankings
     - Z-score tutorial: SciPy stats.zscore
     - Percentile tutorial: NumPy percentile
