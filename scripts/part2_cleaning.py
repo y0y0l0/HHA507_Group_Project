@@ -1,6 +1,6 @@
 import platform as platform
 from common_clean_functions import get_bottom_five_players_per_team,get_top_five_players_per_team, get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_num_days,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
-from matched_metrics_function import get_matched_metrics_by_date
+
 
 '''2.1 Data Understanding Recap (Group)
 |Column                  |Type         |Description                                                                 |
@@ -62,11 +62,11 @@ get_data_in_wide_format_by_athlete_and_metric("2.2", metric_list, "all","wide")
 team_mean_by_players = get_mean_value_for_each_team()
 
 ''' 2.3-2 - For each athlete measurement, calculates their percent difference from their team's average'''
-calculate_percent_difference_from_team_mean()
+#calculate_percent_difference_from_team_mean()
 
 ''' 2.3-3 - Identifies the top 5 and bottom 5 performers relative to their team mean'''
-get_top_five_players_per_team(team_mean_by_players)
-get_bottom_five_players_per_team(team_mean_by_players)
+get_top_five_players_per_team()
+get_bottom_five_players_per_team()
 
 ''' 2.3-4 - Optional zscore calculation implemented: Create z-scores or percentile rankings for each athlete within their team'''
 ''' 
