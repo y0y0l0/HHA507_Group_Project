@@ -330,7 +330,7 @@ def get_top_five_players_per_team() -> pd.DataFrame:
     """
     ## Identifies the top five player relative to their teams mean per metric
     ## Using window function to get individual values with team average
-    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, value, " \
+    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, timestamp, value, " \
                         "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric), 2) AS team_avg_value, " \
                         "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric, playername), 2) AS player_mean_value " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
@@ -352,7 +352,7 @@ def get_top_five_players_per_team() -> pd.DataFrame:
     response['percent_difference_from_team_mean'] = ((response['player_mean_value'] - response['team_avg_value']) / response['team_avg_value']) * 100
     
     # Get unique player averages (remove duplicate rows from window function)
-    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean']]
+    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean','timestamp']]
     
     # Sort descending for top performers and get top 5 per team/metric
     player_summary.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, False], inplace=True)
@@ -376,7 +376,7 @@ def get_bottom_five_players_per_team() -> pd.DataFrame:
     """
     ## Identifies the bottom five player relative to their teams mean per metric
     ## Using window function to get individual values with team average
-    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, value, " \
+    sql_test_query = "SELECT metric, data_source, REPLACE(team,'\\'','') as team, playername, timestamp, value, " \
                         "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric), 2) AS team_avg_value, " \
                         "ROUND(AVG(value) OVER (PARTITION BY REPLACE(team,'\\'',''), metric, playername), 2) AS player_mean_value " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
@@ -398,7 +398,7 @@ def get_bottom_five_players_per_team() -> pd.DataFrame:
     response['percent_difference_from_team_mean'] = ((response['player_mean_value'] - response['team_avg_value']) / response['team_avg_value']) * 100
     
     # Get unique player averages (remove duplicate rows from window function)
-    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean']]
+    player_summary = response.drop_duplicates(subset=['team', 'metric', 'playername'])[['team', 'metric', 'playername', 'data_source', 'player_mean_value', 'team_avg_value', 'percent_difference_from_team_mean','timestamp']]
     
     # Sort ascending for bottom performers (most negative first) and get bottom 5 per team/metric
     player_summary.sort_values(by=['team', 'metric', 'percent_difference_from_team_mean'], ascending=[True, True, True], inplace=True)

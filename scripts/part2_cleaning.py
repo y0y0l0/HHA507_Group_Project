@@ -1,6 +1,6 @@
 import platform as platform
 from common_clean_functions import get_bottom_five_players_per_team,get_top_five_players_per_team, get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_num_days,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
-
+from matched_metrics_function import get_matched_metrics_by_date
 
 '''2.1 Data Understanding Recap (Group)
 |Column                  |Type         |Description                                                                 |
@@ -70,12 +70,15 @@ get_bottom_five_players_per_team()
 
 ''' 2.3-4 - Optional zscore calculation implemented: Create z-scores or percentile rankings for each athlete within their team'''
 ''' 
--Z-score tutorial: SciPy stats.zscore is evaluated in section 3.2.1 for all key metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total,avg_torque_asymmetry,avg_max_force_asymmetry)'''
+-Z-score tutorial: SciPy stats.zscore is evaluated in section 3.2.1 for all key metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque, accel_load_accum, distance_total,avg_torque_asymmetry,avg_max_force_asymmetry)
+please reference scripts/common_clean_functions.py funrciton get_all_clean_metrics_records () section 3.2.1 - Z-score Calculation for Key Metrics
+'''
 ''' 3.2-1 - Export Cleaned Data'''
 ## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')
 ''' get_all_clean_metrics_records("wide")
 moved method call to part4-flags.py to avoid duplicate output
 '''
-''' 3.1-2 Match Force/Torque Metrics with Accel_Load_Accum and Distance_Total by Date'''
-## Call the function to match metrics by if the date is the same only
+''' 3.2-2 Match Force/Torque Metrics with Accel_Load_Accum and Distance_Total by Date'''
+## Call the function to match metrics by the date is the same only
+get_matched_metrics_by_date()
 
