@@ -280,24 +280,53 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 - `4.2` Research Synthesis & Recommendations (Group)
  Synthesize your findings into a research report (3-4 pages) that includes:
  - `Introduction:` Your research question and why it matters (based on literature gaps)
+  - We selected our research question to investigate the relationship between bilateral asymmetry metrics and performance metrics in athletes, with the goal of improving athlete performance and reducing injury risk. This question is important because existing literature suggests that asymmetries greater than 10-15% may be linked to increased injury risk and decreased performance, yet there is a lack of comprehensive analysis using real-world sports performance data from multiple sources.
+  - Our selected metrics include bilateral asymmetry metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque) and performance metrics (accel_load_accum, distance_total). These metrics were chosen based on their prevalence in the datasets and their relevance to athlete performance and injury risk as highlighted in our literature review.
 - `Methods`:
-    - Description of your selected metrics
-    - Data filtering and cleaning approach
-    - Statistical methods used
+    - We reviewed the data provided from three soruces: Hawkins, Kinexon, and Vald. We focused on bilateral asymmetry metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque) and performance metrics (accel_load_accum, distance_total) due to their relevance to athlete performance and injury risk as highlighted in our literature review.
+    - Initial data exploration was conducted to understand the structure and quality of the data, including summary statistics and missing data analysis. We identified metrics with the most NULL or zero values and calculated the percentage of athletes with sufficient measurements and teams with duplication or invalid entries ie: 'Unknown','Player Not Found','Graduated (No longer enrolled)' crosswalked teams ie: 'Women's Basketball' and 'Womens Basketball' 
+    - Data cleaning and preprocessing steps were implemented to handle missing values and prepare the data for analysis. We created derived metrics, such as percent difference from team averages, to contextualize athlete performance.
+    - Longitudinal analyses were performed on selected athletes to assess performance trends over time, while team comparisons were made to identify differences in selected metrics between sports/teams.
+    - Statistical methods included descriptive statistics, linear regression for trend analysis, and t-tests/ANOVA for team comparisons.
+    - Our initial literature review identified key studies discussing the relevance of asymmetry of 10-15% to athlete performance and injury risk. This resulted in our hypothesis that athletes with greater asymmetry would exhibit lower performance metrics and higher injury risk.
+    With this foundation, we utilized 10% as our threshold for flagging asymmetry in bilateral metrics as a risk factor for injury.
+    Athletes who had asymmetric measurements greater than 10% a higher risk threshold , and less than 10% being a lower risk threshold.
+    - Our inital data exploration and cleaning steps ensured that we had sufficient data quality to proceed with our analyses.
+    However, we encountered challenges with matching athletes bilateral metrics measurements with corresponding performance metrics due to inconsistancies in data recording across sources and time stamps. This required careful data wrangling and validation to ensure accurate analyses. 
 - `Results:`
-    - Key findings from your analyses
-    - Tables and figures with appropriate captions
-    - Statistical test results
+    - It would be difficult to prove correlation between asymmetry and performance without robust data matching. This key insight deminished our available data to less than 1% from 44,314 to 383 records. Having measurements from multiple sources for the same athlete on the same date would have strengthened our anlaysis and statistical reliability. With more accurate data matching, we could have conducted more robust statistical analyses to assess the relationship between asymmetry and performance metrics. Due to these data challenges, our findings should be interpreted with caution. And we had to adjust our research question to focus more on data quality and flagging rather than definitive conclusions about asymmetry and performance because of the limited data we could not perform T-test designating our performance metrics as our independent variable and asymmetry as our dependent variable.
+    With these considerations, we proceeded with our analyses to address our research question by with our performance metrics as our independent variable and asymmetry as our dependent variable. These results did not yield any statistical significance so we calculated the mean values for each category of asymmetry (low risk <10% and high risk >10%) and compared these values. This comparison showed little difference between the two groups.
+    ![T-Test Performance vs Asymmetry](.\images\T-test_Asymmetry_Performance.png)
+    We furthred our analysis by preforming a linear regression to determine wheter there are any coorrelations that could be identified between asymmetry and performance metrics. Again, these results did not yield any statistical significance yielding low R-squared values.
+    ![Linear Regression Asymmetry vs Performance](.\images\Linear_Regression_Asymmetry_Performance.png)
+    Despite these challenges, we were able to identify athletes who met our flag criteria based on asymmetry thresholds and testing frequency. This flagging system can serve as a useful tool for coaches and trainers to monitor athlete performance and identify potential injury risks.
+
 - `Discussion:`
-    - How do your findings relate to existing literature?
-    - What gaps did your analysis address?
-    - What are the practical implications for coaches/trainers?
-    - What surprised you? What confirmed existing knowledge?
+    - Unfortunately, due to data limitations and matching challenges, we were unable to determine a definitive relationship between bilateral asymmetry and performance metrics. However, our analysis highlighted the importance of data quality and consistency in sports performance research.
+    To address these gaps, we developed a flagging system based on asymmetry thresholds and testing frequency that can aid coaches and trainers in monitoring athlete performance and identifying potential injury risks.
+    Additionally, we recommend athletes and coaches perform at least one bilateral test with a performance measurement to better understand the relationship between asymmetry and performance.
+    We believe with the improved data colletion and matching, future research could benefit from more robust analyese to help anthletes promote performance and reduce injury risk. Our findings emphasize the need for standardized data collection protocoles across different data sources and teams to ensure accureate and reliable analyses. While we could not draw definitive conclusions about asymmetry and preformance, we hope our flagging system and recommendations will contribute to improving athlete monitoring practices in the field.
 - `Limitations & Future Directions:`
-    - Data limitations (missing values, sample size, etc.)
-    - What additional data would be helpful?
-    - Recommendations for future research
-- `References:` Full citations for your literature review
+    - Our study faced several limitations, primarily related to data quality and matching challenges. The inconsistencies in data recording across sources and time stamps hindered our ability to accurately link bilateral asymmetry measurements with corresponding performance metrics. This limitation significantly reduced our analyzable dataset, impacting the statistical power of our findings.
+    - Additionally, the lack of standardized data collection protocols across different teams and data sources introduced variability that may have influenced our results. Future research should focus on establishing uniform data collection practices to enhance data reliability and comparability.
+    - To build upon our work, future studies should aim to collect more comprehensive datasets with consistent measurements across multiple time points. Implementing a standardized testing protocol that includes both bilateral asymmetry assessments and performance metrics would facilitate more robust analyses.
+    - Furthermore, exploring additional factors such as training load, injury history, and biomechanical assessments could provide a more holistic understanding of the relationship between asymmetry and performance. Advanced statistical techniques, such as multivariate analyses or machine learning approaches, may also yield deeper insights into complex interactions between variables.
+    - Overall, while our study was constrained by data limitations, it highlights the critical need for standardized data in sports performance research. By addressing these challenges, future investigations in the study of bilateral asymmetry on athlete performance and injury risk.
+- `References:` 
+1. Ashworth, B., Hank, M., Khaiyat, O., Coyles, G., Fallon Verbruggen, F., Zemkova, E., Zahalka, F., & Maly, T. (2025). Early Rate of Force Development and Maximal Strength at Different Positions of the Athletic Shoulder Test in Baseball Players. Sports, 13(9), 300.
+2. García, F., Schelling, X., Castellano, J., Martín-García, A., Pla, F., & Vázquez-Guerrero, J. (2022). Comparison of the most demanding scenarios during different in-season training sessions and official matches in professional basketball players. Biology of Sport, 39(2), 237–244.
+3. Junior, M. N. S. d. O., Veneroso, C. E., Ramos, G. P., Johnson, K. E., Guilkey, J. P., Sena, A. F. d. C., Cabido, C. E. T., & Cholewa, J. M. (2021). Distance and intensity profiles in Division I women's soccer matches across a competitive season. Sports, 9(5), 63.
+4. Koyama, T., Nishikawa, J., Yaguchi, K., Irino, T., & Rikukawa, A. (2024). A comparison of the physical demands generated by playing different opponents in basketball friendly matches. Biology of Sport, 41(2), 527–533.
+5. Nakatani, M., Murata, K., Kanehisa, H., & Takai, Y. (2021). Force-velocity relationship profile of elbow flexors in male gymnasts. PeerJ, 9, e10907.
+6. Prudholme, D. C., Coburn, J. W., Lynn, S. K., & Lockie, R. G. (2022). Relationships between sprint, acceleration, and deceleration metrics with training load in Division I collegiate women's soccer players. Journal of Human Kinetics, 85(1), 53–62.
+7. Ruiz-Rios, M., Setuain, I., Cadore, E. L., Izquierdo, M., & Garcia-Tabar, I. (2024). Physical conditioning and functional injury-screening profile of elite female soccer players: a systematic review. International Journal of Sports Physiology and Performance, 19(11), 1355–1366.
+8. Şahbat, Y., Kütük, E., Çat, G., Ünsalan, O., Kart, H., Topkar, O. M., Baysal, Ö., & Erol, B. (2022). An unusual injury pattern: arm wrestling injury, treatment modalities, clinical outcomes, and return to sport. Acta Orthopaedica et Traumatologica Turcica, 56(1), 1–6.
+9. Schaefer, L. V., Carnarius, F., Dech, S., & Bittmann, F. N. (2023). Repeated measurements of Adaptive Force: Maximal holding capacity differs from other maximal strength parameters and preliminary characteristics for non-professional strength vs. endurance athletes. Frontiers in Physiology, 14, 1020954.
+10. Spiering, B. A., Clark, B. C., Schoenfeld, B. J., Foulis, S. A., & Pasiakos, S. M. (2023). Maximizing Strength: The Stimuli and Mediators of Strength Gains and Their Application
+to Training and Rehabilitation. Journal of Strength and Conditioning Research, 37(4), 919–929.
+11. Tavares, N., Vilas-Boas, J. P., & Castro, M. A. (2025). Effect of Preventive Exercise Programs for Swimmer's Shoulder Injury on Rotator Cuff Torque and Balance in Competitive Swimmers: A Randomized Controlled Trial. Healthcare, 13(5), 538.
+12. Xiao, M., Nguyen, J. N., Hwang, C. E., & Abrams, G. D. (2021). Increased lower extremity injury risk associated with player load and distance in collegiate women's soccer. The Orthopaedic Journal of Sports Medicine, 9(10), 23259671211048248.
+
 Report saved in `part4_research_synthesis.pdf` in the `reports` folder
 - `4.3` Final Presentation (Group)
 -`Introduction (2 min):`
