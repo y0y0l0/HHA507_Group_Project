@@ -259,6 +259,11 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
     What might explain the differences or similarities?
     Results of Jupyter notebook part3_viz_comparison in the team SBU Sports data Project are found below:
     link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
+    To run this notebook, please load the following files into working directory:
+    - 3.2-1_all_clean_metrics_records.csv
+    - 3.2-1_all_clean_metrics_records_wide_format.csv
+    - 3.2-2_matched_metrics_by_date_wide_format.csv
+
 
 - `3.3` Dashboard Metric (Full Group)
    - Create a summary visualization that shows:
@@ -267,6 +272,7 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
    - Identify any gaps or unusual patterns in data collection
     link to team part3_viz_comparison notebook: https://colab.research.google.com/drive/1pl6wRVZaPeZ0Pbktx6SGiONwlCW_hQ-0?usp=sharing
     with additional analysis in: https://colab.research.google.com/drive/1jJDtOS29TCApR4HsrWrxdsDtnwxfeMhS?usp=sharing
+
 # 4 Research Synthesis & Application
 - `4.1` Performance Monitoring Flag System (Group)
     - Design a flagging system based on your selected metrics and literature review:
@@ -300,6 +306,10 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
     We furthred our analysis by preforming a linear regression to determine wheter there are any coorrelations that could be identified between asymmetry and performance metrics. Again, these results did not yield any statistical significance yielding low R-squared values.
     ![Linear Regression Asymmetry vs Performance](/images/Linear_Regression_Asymmetry_Performance.png)
     Despite these challenges, we were able to identify athletes who met our flag criteria based on asymmetry thresholds and testing frequency. This flagging system can serve as a useful tool for coaches and trainers to monitor athlete performance and identify potential injury risks.
+
+    As a incidental finding, we examined the relationship between torque and max force asymmetry to see if there were any correlations between these two bilateral metrics.![Torque Relationships](/images/Torque_Relationships.png)
+    From our data, we found a direct correlation between torque and max force asymmetry with a p-value close to zero and adjusted R-squared value of 0.94 or better indicating a strong relationship between these two metrics.
+    ![Linear Regression Max Force vs Torque](/images/Linear_Regression_MaxForce_vs_Torque.png)
 
 - `Discussion:`
     - Unfortunately, due to data limitations and matching challenges, we were unable to determine a definitive relationship between bilateral asymmetry and performance metrics. However, our analysis highlighted the importance of data quality and consistency in sports performance research.
@@ -350,3 +360,10 @@ Report saved in `part4_research_synthesis.pdf` in the `reports` folder
     - What additional research is needed
 -`Q&A (1-2 min)`
     - Presentation slides are found in saved at:  https://docs.google.com/presentation/d/1IiI5CwbIHg4V8L8NR5JBr0AiKxmIxBGMQci9IVsK6oo/edit?usp=sharing and a copy of the slides are stored as `AHI 507_ Sports Data.pptx` in the `reports` folder
+ - `5.0` Extension Opportunities (Optional)
+  - Interactive Dashboard
+    - Create an interactive dashboard (using tools like Tableau, Power BI, or Dash) to visualize key metrics and trends over time.
+    - Include filters for teams, athletes, and metrics to allow users to explore the data dynamically.
+     - Link to shared Vizualization: https://public.tableau.com/app/profile/yo.lo/viz/SportInjuryRiskDashboard/Playersriskevaluationbydate
+      - Tablueau dashboard file saved as `Sports_Injury_Risk_Dashboard.twbx` in the `reports` folder
+      ![Tableau Dashboard Screenshot](/images/Tableau_Dashboard_Screenshot.png)
