@@ -323,7 +323,9 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
     - To build upon our work, future studies should aim to collect more comprehensive datasets with consistent measurements across multiple time points. Implementing a standardized testing protocol that includes both bilateral asymmetry assessments and performance metrics would facilitate more robust analyses. Additionally, tracking injury incidence and missed measurements over time could provide valuable insights into the relationship between asymmetry, performance, and injury risk.
     - Furthermore, exploring additional factors such as training load, injury history, and biomechanical assessments could provide a more holistic understanding of the relationship between asymmetry and performance. Advanced statistical techniques, such as multivariate analyses or machine learning approaches, may also yield deeper insights into complex interactions between variables.
     - Overall, while our study was constrained by data limitations, it highlights the critical need for standardized data in sports performance research. By addressing these challenges, future investigations in the study of bilateral asymmetry on athlete performance and injury risk.
--
+-  `References`
+    - List of all references are cited in literature review and report and can be found in the `references.md` file in the `reports` folder.
+    ![link to references:] '/reports/references.md'
 Report saved in `part4_research_synthesis.pdf` in the `reports` folder
 - `4.3` Final Presentation (Group)
 -`Introduction (2 min):`
