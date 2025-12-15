@@ -19,10 +19,10 @@ link to team presendation slides: https://docs.google.com/presentation/d/1IiI5Cw
 
 # Team literature review:
 link to team literature review: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.es53pvsqyhzj#heading=h.owyzndpwo8a8
-![Literature Review](\reports\part1_literature_review.pdf)
+[Literature Review](\reports\part1_literature_review.pdf)
 # Team Research Synthesis:
 link to team research synthesis: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.qxv8ge9pvyem
-![Research Synthesis](\reports\part2_research_synthesis.pdf)
+[Research Synthesis](\reports\part2_research_synthesis.pdf)
 
 # Team Notebooks:
 ### Part 3. Visualizations and Analysis
@@ -329,7 +329,7 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
     - Overall, while our study was constrained by data limitations, it highlights the critical need for standardized data in sports performance research. By addressing these challenges, future investigations in the study of bilateral asymmetry on athlete performance and injury risk.
 -  `References`
     - List of all references are cited in literature review and report and can be found in the `references.md` file in the `reports` folder.
-    ![link to references:] '/reports/references.md'
+    [link to references:] '/reports/references.md'
 Report saved in `part4_research_synthesis.pdf` in the `reports` folder
 - `4.3` Final Presentation (Group)
 -`Introduction (2 min):`
