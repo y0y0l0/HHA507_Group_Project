@@ -19,11 +19,13 @@ link to team presendation slides: https://docs.google.com/presentation/d/1IiI5Cw
 
 # Team literature review:
 link to team literature review: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.es53pvsqyhzj#heading=h.owyzndpwo8a8
-[Literature Review](/reports/part1_literature_review.pdf)
+
+- [Link to Literature Review](/reports/part1_literature_review.pdf)
 
 # Team Research Synthesis:
 link to team research synthesis: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.qxv8ge9pvyem
-[Research Synthesis](/reports/part2_research_synthesis.pdf)
+
+- [Link to Research Synthesis](/reports/part4_research_synthesis.pdf)
 
 # Team Notebooks:
 ### Part 3. Visualizations and Analysis
