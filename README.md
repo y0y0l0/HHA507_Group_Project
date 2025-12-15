@@ -54,6 +54,20 @@ link to team part3_viz_comparison notebook: https://colab.research.google.com/dr
     ├── requirements.txt                 # Project dependencies
     ├── GROUP_ASSIGNMENT.pdf             # Group assignment details    
     └── .gitignore                       # Git ignore file
+
+
+# How to Run the project code:
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the required dependencies using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the scripts in the following order:
+   - `part_exploration.py` for initial data exploration.
+   - `part2_cleaning.py` for data cleaning and preprocessing.
+   - `part4-flags.py` for flagging athletes based on selected metrics.
+   
 # 1 Database Connection & Data Exploration
 - Establish database connection
 - Understand data structure and quality
