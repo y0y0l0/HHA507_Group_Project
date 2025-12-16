@@ -242,16 +242,16 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
         - One row per test session
         - Properly handles missing values
             - only include records where the team is not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
-            - Concolidate team names by removing any single quotes
-            -Saves the resulting DataFrame to a CSV file with the naming convention: `2.2_[first playername in list]_data_in_wide_format_by_athlete_and_metric.csv`
+            - Consolidate team names by removing any single quotes
+            -Saves the results from our data frame to a CSV file with the naming convention: `2.2_[first playername in list]_data_in_wide_format_by_athlete_and_metric.csv`
 - `2.3` Create a Derived Metric (Group)
 - 1. Calculates the mean value for each team (using the team column)
-    - Saves the resulting DataFrame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
+    - Saves the results from our data frame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
 - 2. For each athlete measurement, calculates their percent difference from their team's average
-    - Saves the resulting DataFrame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
+    - Saves the results from our data frame to a CSV file named `2.3-1&2_mean_value_for_each_team.csv`
 - 3. Identifies the top 5 and bottom 5 performers relative to their team mean
-    - Saves the top 5 players per team resulting DataFrame to a CSV file named `2.3-3_top_five_players_per_team.csv`
-    - Saves the bottom 5 players per team resulting DataFrame to a CSV file named `2.3-3_bottom_five_players_per_team.csv`
+    - Saves the top 5 players per team results from our data frame to a CSV file named `2.3-3_top_five_players_per_team.csv`
+    - Saves the bottom 5 players per team results from our data frame to a CSV file named `2.3-3_bottom_five_players_per_team.csv`
 - 4. Optional: Create z-scores as part of 3.2.1 as exported cleaned data
     - Z-scores or percentile rankings for each athlete within their team
 # 3 Longitudinal Analysis & Visualization (Group)
@@ -297,7 +297,7 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
 # 4 Research Synthesis & Application
 - `4.1` Performance Monitoring Flag System (Group)
     - Design a flagging system based on your selected metrics and literature review:
-    - Based on your literature review, define thresold of asymmetricality of >10%- 15% in bilateral metrics as a risk factor for injury
+    - Based on your literature review, define threshold of asymmetricality of >10%- 15% in bilateral metrics as a risk factor for injury
     - Identify athletes who meet any of the following criteria:
     - Identify Athlete hasn't been tested in >30 days Left/right asymmetry if using bilateral metrics
 - Deviation from team norms
@@ -313,31 +313,31 @@ The `part2_cleaning.py` script in the `scripts/` directory contains functions to
     - We reviewed the data provided from three soruces: Hawkins, Kinexon, and Vald. We focused on bilateral asymmetry metrics (leftMaxForce, rightMaxForce, leftTorque, rightTorque) and performance metrics (accel_load_accum, distance_total) due to their relevance to athlete performance and injury risk as highlighted in our literature review.
     - Initial data exploration was conducted to understand the structure and quality of the data, including summary statistics and missing data analysis. We identified metrics with the most NULL or zero values and calculated the percentage of athletes with sufficient measurements and teams with duplication or invalid entries ie: 'Unknown','Player Not Found','Graduated (No longer enrolled)' crosswalked teams ie: 'Women's Basketball' and 'Womens Basketball' 
     - Data cleaning and preprocessing steps were implemented to handle missing values and prepare the data for analysis. We created derived metrics, such as percent difference from team averages, to contextualize athlete performance.
-    We determined that any players with team names in ('Unknown','Player Not Found','Graduated (No longer enrolled)') would be excluded from our analysis. We designated these players as inactiveto ensure data integrity and accuracy.
+    We determined that any players with team names in ('Unknown','Player Not Found','Graduated (No longer enrolled)') would be excluded from our analysis. We designated these players as inactive to ensure data integrity and accuracy.
     - Longitudinal analyses were performed on selected athletes to assess performance trends over time, while team comparisons were made to identify differences in selected metrics between sports/teams.
     - Statistical methods included descriptive statistics, linear regression for trend analysis, and t-tests/ANOVA for team comparisons.
     - Our initial literature review identified key studies discussing the relevance of asymmetry of 10-15% to athlete performance and injury risk (Parkinson et al⁶). This resulted in our hypothesis that athletes with greater asymmetry would exhibit lower performance metrics and higher injury risk.
     With this foundation, we utilized 10% as our threshold for flagging asymmetry in bilateral metrics as a risk factor for injury.
     Athletes who had asymmetric measurements greater than 10% a higher risk threshold , and less than 10% being a lower risk threshold.
-    - Our inital data exploration and cleaning steps ensured that we had sufficient data quality to proceed with our analyses.
+    - Our initial data exploration and cleaning steps ensured that we had sufficient data quality to proceed with our analyses.
     However, we encountered challenges with matching athletes bilateral metrics measurements with corresponding performance metrics due to inconsistencies in data recording across sources and time stamps. This required careful data wrangling and validation to ensure accurate analyses. 
 - `Results:`
-    - It would be difficult to prove correlation between asymmetry and performance without robust data matching. This key insight deminished our available data to less than 1% from 44,314 to 383 records. Having measurements from multiple sources for the same athlete on the same date would have strengthened our anlaysis and statistical reliability. With more accurate data matching, we could have conducted more robust statistical analyses to assess the relationship between asymmetry and performance metrics. Due to these data challenges, our findings should be interpreted with caution. And we had to adjust our research question to focus more on data quality and flagging rather than definitive conclusions about asymmetry and performance because of the limited data we could not perform T-test designating our performance metrics as our independent variable and asymmetry as our dependent variable.
+    - It would be difficult to prove correlation between asymmetry and performance without robust data matching. This key insight diminished our available data to less than 1% from 44,314 to 383 records. Having measurements from multiple sources for the same athlete on the same date would have strengthened our analysis and statistical reliability. With more accurate data matching, we could have conducted more robust statistical analyses to assess the relationship between asymmetry and performance metrics. Due to these data challenges, our findings should be interpreted with caution. And we had to adjust our research question to focus more on data quality and flagging rather than definitive conclusions about asymmetry and performance because of the limited data we could not perform T-test designating our performance metrics as our independent variable and asymmetry as our dependent variable.
     With these considerations, we proceeded with our analyses to address our research question by with our performance metrics as our independent variable and asymmetry as our dependent variable. These results did not yield any statistical significance so we calculated the mean values for each category of asymmetry (low risk <10% and high risk >10%) and compared these values. This comparison showed little difference between the two groups. We then refined our data further to differentiate between athletes with asymmetry >15% as higher risk then those with >10% and <15% to classify a at risk group to examine if there were any significant differences in performance metrics between these groups.
     ![T-Test Performance vs Asymmetry](/images/T-test_Asymmetry_Performance.png)
-    We furthred our analysis by preforming a linear regression to determine wheter there are any coorrelations that could be identified between asymmetry and performance metrics. Again, these results did not yield any statistical significance yielding low R-squared values.
+    We furthered our analysis by preforming a linear regression to determine whether there are any correlations that could be identified between asymmetry and performance metrics. Again, these results did not yield any statistical significance yielding low R-squared values.
     ![Linear Regression Asymmetry vs Performance](/images/Linear_Regression_Asymmetry_Performance.png)
     Despite these challenges, we were able to identify athletes who met our flag criteria based on asymmetry thresholds and testing frequency. This flagging system can serve as a useful tool for coaches and trainers to monitor athlete performance and identify potential injury risks.
 
     As a incidental finding, we examined the relationship between torque and max force asymmetry to see if there were any correlations between these two bilateral metrics.![Torque Relationships](/images/Torque_Relationships.png)
-    From our data, we found a direct correlation between torque and max force asymmetry with a p-value close to zero and adjusted R-squared value of 0.94 or better indicating a strong relationship between these two metrics. It is with this understanding we can infer that if an athlete has at least one set of bilaterla measurements paired with a performance metric, we can use either torque or max force asymmetry to evaluate their correlation to performance. This is why we suggest at least having one bilateral test set with a performance metric to help determine the relationship between asymmetry and peformance is necessary for future data collection. 
+    From our data, we found a direct correlation between torque and max force asymmetry with a p-value close to zero and adjusted R-squared value of 0.94 or better indicating a strong relationship between these two metrics. It is with this understanding we can infer that if an athlete has at least one set of bilateral measurements paired with a performance metric, we can use either torque or max force asymmetry to evaluate their correlation to performance. This is why we suggest at least having one bilateral test set with a performance metric to help determine the relationship between asymmetry and performance is necessary for future data collection. 
     ![Linear Regression Max Force vs Torque](/images/Linear_Regression_MaxForce_vs_Torque.png)
 
 - `Discussion:`
     - Unfortunately, due to data limitations and matching challenges, we were unable to determine a definitive relationship between bilateral asymmetry and performance metrics. However, our analysis highlighted the importance of data quality and consistency in sports performance research.
     To address these gaps, we developed a flagging system based on asymmetry thresholds and testing frequency that can aid coaches and trainers in monitoring athlete performance and identifying potential injury risks.
     Additionally, we recommend athletes and coaches perform at least one bilateral test with a performance measurement to better understand the relationship between asymmetry and performance.
-    We believe with the improved data colletion and matching, future research could benefit from more robust analyese to help anthletes promote performance and reduce injury risk. Our findings emphasize the need for standardized data collection protocoles across different data sources and teams to ensure accureate and reliable analyses. While we could not draw definitive conclusions about asymmetry and preformance, we hope our flagging system and recommendations will contribute to improving athlete monitoring practices in the field.
+    We believe with the improved data collection and matching, future research could benefit from more robust analyses to help athletes promote performance and reduce injury risk. Our findings emphasize the need for standardized data collection protocols across different data sources and teams to ensure accurate and reliable analyses. While we could not draw definitive conclusions about asymmetry and performance, we hope our flagging system and recommendations will contribute to improving athlete monitoring practices in the field.
 - `Limitations & Future Directions:`
     - Our study faced several limitations, primarily related to data quality and matching challenges. The inconsistencies in data recording across sources and time stamps hindered our ability to accurately link bilateral asymmetry measurements with corresponding performance metrics. This limitation significantly reduced our analyzable dataset, impacting the statistical power of our findings.
     - Additionally, the lack of standardized data collection protocols across different teams and data sources introduced variability that may have influenced our results. Future research should focus on establishing uniform data collection practices to enhance data reliability and comparability.
