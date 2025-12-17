@@ -374,5 +374,13 @@ Report saved in `part4_research_synthesis.pdf` in the `reports` folder
     - Create an interactive dashboard (using tools like Tableau, Power BI, or Dash) to visualize key metrics and trends over time.
     - Include filters for teams, athletes, and metrics to allow users to explore the data dynamically.
      - Link to shared Vizualization: https://public.tableau.com/app/profile/yo.lo/viz/SportInjuryRiskDashboard/Playersriskevaluationbydate
-      - Tablueau dashboard file saved as `Sports_Injury_Risk_Dashboard.twbx` in the `reports` folder
+      - Tableau dashboard file saved as `Sports_Injury_Risk_Dashboard.twbx` in the `reports` folder
       ![Tableau Dashboard Screenshot](/images/Tableau_Dashboard_Screenshot.png)
+    
+    
+     - Link to Testing Checker Dashboard tool: https://public.tableau.com/app/profile/nina.barcelon/viz/TestingChecker/TestingChecker
+      - Tableau Dashboard saved as 'Testing Checker.twbx' within 'reports' folder
+      ![Dashboard of testing checker](/images/Tableau_Dash_Testing_Checker.PNG)
+
+
+
